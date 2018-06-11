@@ -1,12 +1,15 @@
 .slabo {font-family: 'Slabo 27px', serif;}
 .roboto {font-family: 'Roboto', sans-serif;}
 .yellow {background-color:#ffc30b;color: black;}
+.yellowTxt {color: #ffc30b}
 .yellowGd {background: linear-gradient(to bottom, #ffc30b 0%, #ffcf3b 100%);}
 .darkBrown {background-color:#332702;color: white;}
 .red {background-color: #ea432f; color: white}
 .grey {background-color:#9e9e9e; color: white}
 .darkGTxt {color: #191301;}
+.greyTxt {color: #808080}
 .blue {background-color: #2a389e; color: white}
+.blueTxt {color: #2a389e}
 .yellowBorder {border: #ffc30b solid 0.5vw}
 .blueBorder {border: #2a389e solid 0.5vw}
 .greenBorder {border: green solid 0.5vw}
