@@ -11,3 +11,13 @@ function show(name){
 function showCell(name){
     document.getElementById(name).style.display = "block";
 }
+
+function toggle(c,n) {
+    var className = document.getElementsByClassName(c);
+    var i;
+    for (i=0;i<className.length;i++) {
+        className[i].style.display = "none";
+    }
+    className[n-1].style.display = "block";
+    className[n-1].scrollIntoView ({behavior:"smooth"})
+}

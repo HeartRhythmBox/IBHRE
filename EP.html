@@ -39,6 +39,8 @@
 }
 
 
+
+
 </style>
 
 <body>
@@ -52,7 +54,7 @@
     <span class="onThisPage">on this page</span>
     <a href="#basic" style="text-align: right;">Basic</a>
     <a href="#clinical" style="text-align: right;">Clinical</a>
-    <a href="#" style="text-align: right;">Qs&As</a>
+    <a href="#QA" style="text-align: right;">Qs&As</a>
     <a href="https://www.facebook.com/HeartRhythmBox/" style="border-top: #332702 0.2vmin solid">
         <i title="@HeartRhythmBox" class="fab fa-facebook" 
             style="color:  #3B5998; border: transparent;">&nbspHeartRhythmBox</i></a>
@@ -360,12 +362,144 @@ onclick="openNav()">&#9776;
             <li class="w3-hover-grey w3-border-grey">Digoxin: increase intracellular calcium; increase contractility and decrease heart rate.</li>
             <li class="w3-hover-grey w3-border-grey">Adenosine: cause AV block by hyperpolarize cell via adenosine<sub>1&nbsp;</sub> receptor.</li>
             <li class="w3-hover-grey w3-border-grey">Except Beta-Blockers, none of AADs save life. </li>        
-            <li class="w3-hover-grey w3-border-grey">In a patient with structural heart disease, class I agents increase mortality.
-                Amiodarone does not (but does not reduce mortality either).
-            </li>
-        </ul>
+            <li class="w3-hover-grey w3-border-white">In a patient with structural heart disease, class I agents increase mortality.
+                Amiodarone does not (but does not reduce mortality either).</li>
+            </ul>
     </div>
-        
+    </div>
+
+<!--10Blk AAD w device-->
+<div class="block w3-center">
+    <div class="w3-btn next" onmouseover="next(10)"></div>
+    <div class="w3-row w3-padding roboto bold h4 w3-wide w3-mobile yellow blueTxt">
+        Drugs and Devices </div> 
+    <table class="w3-table yellowBorder yellow" style="padding: 2vw">
+        <tr>
+            <td class="h5 slabo yellowBorder blue w3-center" style="vertical-align: middle">Pacing</td>
+            <td class="roboto h6 w3-green yellowBorder w3-center" style="vertical-align: middle">
+                <b>Increase Threshold</b><br>
+                Class Ic <br> beta blockers, quinidine <br>
+                hypoxemia, acidosis, alkalosis, hyperglycemia
+            </td>
+            <td class="roboto h6 yellowBorder red w3-center" style="vertical-align: middle">
+                <b>Decrease Threshold</b><br>
+                Epinephrine, Isoproterenol, Atropine, steroids
+            </td>
+        </tr>
+        <tr>
+            <td class="h5 slabo yellowBorder blue w3-center" style="vertical-align: middle">Defibrillation</td>
+            <td class="roboto h6 w3-green yellowBorder w3-center" style="vertical-align: middle">
+                <b>Increase Threshold</b><br>
+                amiodarone, lidocaine, flecainide, <br>sildenafil (Viagra), alcohol
+            </td>
+            <td class="roboto h6 yellowBorder red w3-center" style="vertical-align: middle">
+                <b>Decrease Threshold</b><br>
+                sotalol, dofetilide
+            </td>
+            </tr>
+
+    </table>
+      
+    
+</div>
+
+<!--11Blk hypoK-->
+<div class="block w3-center  darkBrown">
+    <div class="w3-btn next" onmouseover="next(11)"></div>
+    <div class="w3-row w3-padding roboto bold h4 yellowTxt">Prolong QT</div>
+    <div class="w3-row w3-padding w3-mobile">
+        <div class="w3-container w3-cell w3-padding w3-mobile">
+            <img src="media/EP/hypokalemia.png">
+            <div class="ref">
+                <a href="http://www.onlinejacc.org/content/42/3/401">Yan et al. JACC 2003.</a>
+            </div>
+        </div>
+        <div class="w3-container w3-cell w3-padding w3-mobile">
+            <img src="media/EP/tdp on sotalol.png">
+        </div>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-center w3-padding roboto h6">
+        <li class="w3-hover-khaki">Prolong QT can "trigger" torsades de pointes.</li>
+        <li class="w3-hover-khaki">Acquired long QTc can be due to drugs and/or electrolytes imbalance.</li>
+        <li class="w3-hover-khaki">Drugs include class III AADs, erythromycin, haloperidol, methadone</li>
+        <li class="w3-hover-khaki">Hypokalemia, hypomagnesemia, and bradycardia can also precipitate torsades.</li>
+    </ul>
+</div>
+
+<!--12Blk QA-->
+<div id="QA" class="block w3-center">
+    <div class="w3-row w3-padding slabo h4">Questions and Answers</div>
+    <div class="w3-row w3-padding w3-mobile roboto h6" style="padding-bottom: 5vh">
+        <span class="w3-badge yellow" onclick="toggle('Q',1)" style="cursor: pointer;">Q1</span>
+        <span class="w3-badge yellow" onclick="toggle('Q',2)" style="cursor: pointer;">Q2</span>
+        <span class="w3-badge yellow" onclick="toggle('Q',3)" style="cursor: pointer;">Q3</span>
+    </div>
+    <div class="blueBorder Q" style="display: block; padding: 1vmax">
+    <div class="w3-row w3-padding roboto h6 w3-mobile">
+        <div class="w3-col s7 w3-container w3-padding w3-mobile">
+        <img src="media/EP/tdp tracing.png" style="border: #3B5998 0.2vw solid;">
+        </div>
+        <div class="w3-col s5 w3-padding w3-mobile" style="text-align: justify">
+        Q1. A 54-year-old woman with symptomatic paroxysmal AF is admitted to the hospital
+        for sotalol loading. On the third hospital day, a two-channel rhythm strip
+        is recorded (as shown). <br>Which of the following should you recommend?</div>
+    </div>
+    <ol type="a" style="list-style-position: inside; text-align: left" class="roboto h6">
+            <li>Reduce the dose of sotalol by 50%, discharge the patient, 
+                and see her in the office the next day.</li>
+            <li>Refer her for ICD insertion.</li>
+            <li>Perform immediate electrical defibrillation. </li>
+            <li>Start IV amiodarone and continue for the duration of five half-lives of sotalol.
+                </li>
+            <li>Stop sotalol and give IV magnesium. </li>
+        </ol>
+    <div class="w3-button blue" onclick="showCell('A1')">Show Answer</div>
+    <div class="w3-container w3-padding roboto h6 w3-border-top" id="A1" style="display: none">
+    Answer: e <br>
+    Tracing = sinus rhythm with prolong QT with PVCs which later triggers torsades.
+    Sotalol is a class III AAD and known to increase QT interval.
+    Treatment includes discontinue the causal agent, give IV magnesium regardless of the magnesium level.
+    Rapid pacing may be required in persistent VT cases.<br>
+    <span class="ref">
+        <a href="http://circ.ahajournals.org/content/early/2010/02/08/CIRCULATIONAHA.109.192704">
+            2010 AHA/ACCF Scientific Statement on Prevention of Torsade de Pointes in Hospital Settings
+        </a>
+    </span>
+    </div>
+    </div>
+
+    <div class="blueBorder Q" style="display: none">
+        <div class="w3-row w3-padding roboto h6 w3-mobile">
+            <div class="w3-row w3-padding w3-mobile" style="text-align: justify">
+            Q2. Which of the following drugs is most likely to elevate the myocardial
+            stimulation threshold after implantation of a dual chamber pacemaker?</div>
+        </div>
+        <ol type="a" style="list-style-position: inside; text-align: left" class="roboto h6">
+                <li>Digoxin</li>
+                <li>Diltiazem</li>
+                <li>Flecainide</li>
+                <li>Mexiletine</li>
+                <li>Sotalol</li>
+            </ol>
+        </div>
+
+    <div class="blueBorder Q" style="display: none">
+            <div class="w3-row w3-padding roboto h6 w3-mobile">
+                <img src="media/EP/CHB torsades.png" style="align-self: center">
+                <div class="w3-row w3-padding w3-mobile" style="text-align: justify">
+                Q3. A 70 year-old man with paroxysmal AF and bifascicular block had frequent
+                episodes of syncope over the past 2 days. The episodes occurred after he 
+                started taking sotalol.<br>
+                Which is the most appropriate management?</div>
+            </div>
+            <ol type="a" style="list-style-position: inside; text-align: left" class="roboto h6">
+                    <li>Continue sotalol and implant permanent pacemaker.</li>
+                    <li>Continue sotalol and implant temporary pacemaker.</li>
+                    <li>Continue sotalol and implant ICD.</li>
+                    <li>Discontinue sotalol and implant ICD.</li>
+                    <li>Discontinue sotalol and implant permanent pacemaker.</li>
+                </ol>
+            </div>
 </div>
 
 

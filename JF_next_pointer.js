@@ -3,6 +3,12 @@
 function next(n) {
     var block = document.getElementsByClassName("block");
     block[n].scrollIntoView({behavior:"smooth", block:"start", inline:"start"});
+    var i;
+    for (i=0;i<block.length;i++) {
+        block[i].style.opacity = "1";
+    }
+    block[n-1].style.opacity = "0.5";
+    block[n+1].style.opacity = "0.5";
     }
 
 //pointer
