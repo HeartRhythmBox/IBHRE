@@ -15,7 +15,7 @@
 .greenBorder {border: green solid 0.5vw}
 
 
-.bold {font-weight: 900}
+.bold {font-weight: 700}
 .h1 {font-size: 7vmax}
 .h2 {font-size: 6vmax}
 .h3 {font-size: 5vmax}
@@ -99,7 +99,7 @@ margin-bottom: 14vh;
     z-index: 1; height: fit-content; width: 100%;
     top: 0;
     left: 0;
-    padding: 1vh 1vw 1vh 1vw;
+    padding: 1vmax;
     background-color: #ffc30b;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.2s;
@@ -110,7 +110,7 @@ margin-bottom: 14vh;
     font-size: 2.5vmax;
     position: fixed; 
     background-color: transparent; color: #e5E5E5;
-    top: 90%;left: 96%;
+    top: 90vh;left: 96vw;
     cursor: pointer;transition: 0.2s;
     display: none;
    }
