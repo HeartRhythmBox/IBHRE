@@ -26,8 +26,8 @@
 
 @media only screen and (max-width: 600px){
     .bold {font-weight: 500};
-    .toTop {font-size:2.5em; left: 90%}
-    .sidenav, .sidenav a, .onThisPage, .closebtn {font-size: 2.5em}
+    .toTop {font-size:5em;}
+    .sidenav, .sidenav a, .onThisPage, .closebtn {font-size: 5em}
  }
 
 .dropCap {
@@ -117,7 +117,7 @@ margin-bottom: 14vh;
     font-size: 2.8vmax;
     position: fixed; 
     background-color: transparent; color: #e5E5E5;
-    top: 90vh;left: 95vw;
+    top: 90%;left: 95%;
     cursor: pointer;transition: 0.2s;
     display: none;
    }
