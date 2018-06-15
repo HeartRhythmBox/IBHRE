@@ -26,7 +26,7 @@
 
 @media only screen and (max-width: 600px){
     .bold {font-weight: 500};
-    .toTop {font-size: 3.5vmax; left: 90vw;}
+    .toTop {font-size: 4vmax; left: 80vw;}
  }
 
 .dropCap {
