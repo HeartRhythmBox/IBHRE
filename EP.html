@@ -33,11 +33,14 @@
 .three {left:59%; top: 45%}
 .four {left: 65%; top: 71%}
 
+.phaseTxt {position: absolute; left: 70%;top: 20%;}
+
 @media only screen and (max-width: 600px){
 .zero {left: 32%;top: 45%;}
-.one {left: 38%; top: 16%;}
-.two {left: 45%; top: 19%}
-.four {left: 65%; top: 62%}
+.one {left: 38%; top: 17%;}
+.two {left: 45%; top: 20%}
+.four {left: 65%; top: 60%}
+.phaseTxt {left: 70%; top: 0%}
 }
 
 
@@ -102,7 +105,7 @@ w3-round-xxlarge w3-mobile" style="margin-top: 1vw">
     <span class="phase four" id="phase4" onclick="show(this)">4</span>
     
     <!--show phase-->
-    <ul class="w3-ul roboto h6" style="position: absolute; left: 5%;top: 20%;">
+    <ul class="w3-ul roboto h6 phaseTxt" >
         <li id="phase0Txt" style="display: none">Phase 0: Na <sup>+</sup>&uarr;</li>
         <li id="phase1Txt" style="display: none">Phase 1: K <sup>+</sup>&darr;</li>
         <li id="phase2Txt" style="display: none">Phase 2: Ca <sup>2+</sup>&uarr;</li>
@@ -159,7 +162,7 @@ w3-round-xxlarge w3-mobile" style="margin-top: 1vw">
             <div class="w3-content w3-center roboto h6">non-PACEMAKER cells</div>
         </div>
     </div>
-    <div style="overflow: auto">
+    <div class="w3-responsive">
     <table class="w3-table w3-bordered w3-centered w3-hoverable w3-center roboto h6">
         <tr class="w3-green">
             <th>Properties</th> <th>Pacemaker cells</th>    <th>non-Pacemaker cells</th>
@@ -203,8 +206,7 @@ w3-round-xxlarge w3-mobile" style="margin-top: 1vw">
 <!--6Blk conduction refractory-->
 <div class="block yellowGd w3-center">
     <div class="w3-btn next" onmouseover="next(6)"></div>
-    <div class="fullBlock">
-        <div class="w3-cell-row w3-mobile">
+        <div class="fullBlock w3-cell-row w3-mobile">
             <div class="w3-container w3-cell w3-mobile">
             <div class="darkGTxt roboto h1" style="margin-top: 35vh">
                 <b><em>re</em></b>                 
@@ -225,7 +227,7 @@ w3-round-xxlarge w3-mobile" style="margin-top: 1vw">
             <img src="media/EP/RefractoryPeriod.png" style="width: 85%;">
             </div>    
         </div>
-    </div>
+   
 </div>
 
 

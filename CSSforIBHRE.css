@@ -100,10 +100,6 @@ margin-bottom: 14vh;
     border: none;
 }
 
-@media only screen and (max-width: 600px){
-    .sidenav a, .closebtn, .onThisPage {font-size: 3vmax}
-    }
-
 .topnav {
     position: sticky; word-wrap: break-word;
     z-index: 1; height: fit-content; width: 100%;
@@ -119,11 +115,16 @@ margin-bottom: 14vh;
 .toTop {
     position: fixed; 
     background-color: transparent; color: #e5E5E5;
-    top: 90%;right: 4%;
+    top: 92%;right: 2%;
     cursor: pointer;transition: 0.2s;
     display: none;
    }
 .toTop :hover {opacity: 0.6}
+
+@media only screen and (max-width: 600px){
+    .sidenav a, .closebtn, .onThisPage {font-size: 3vmax}
+    .toTop {top: 95%}    
+}
 
 /*pointer*/
 .pointer {
