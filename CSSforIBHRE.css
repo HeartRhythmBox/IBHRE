@@ -26,7 +26,7 @@
 
 @media only screen and (max-width: 600px){
     .bold {font-weight: 500};
-    .toTop {font-size:2em; left: 80vw;}
+    .toTop {font-size:2em; left: 90%}
     .sidenav a {font-size: 2em}
  }
 
