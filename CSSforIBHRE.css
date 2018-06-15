@@ -24,6 +24,11 @@
 .h6 {font-size: 2vmax}
 .h7 {font-size: 1.5vmax}
 
+@media only screen and (max-width: 600px){
+    .bold {font-weight: 500};
+    .toTop {font-size: 3vmax}
+ }
+
 .dropCap {
     float: left;
     width: 8vmax;
@@ -95,7 +100,7 @@ margin-bottom: 14vh;
 }
 
 .topnav {
-    position: sticky; 
+    position: sticky; word-wrap: break-word;
     z-index: 1; height: fit-content; width: 100vw;
     top: 0;
     left: 0;
@@ -104,16 +109,13 @@ margin-bottom: 14vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.2s;
     }
-    @media only screen and (max-width: 600px){
-        .topnav {display: inline;}
-        .bold {font-weight: 600}
-    }
+    
 
 .toTop {
     font-size: 2.8vmax;
     position: fixed; 
     background-color: transparent; color: #e5E5E5;
-    top: 90vh;left: 96vw;
+    top: 90vh;left: 95vw;
     cursor: pointer;transition: 0.2s;
     display: none;
    }
