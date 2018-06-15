@@ -27,7 +27,7 @@
 @media only screen and (max-width: 600px){
     .bold {font-weight: 500};
     .toTop {font-size:2.5em; left: 90%}
-    .sidenav, .sidenav a, .onThisPage, .closebtn {font-size: 2.5em}
+    .sidenav, .sidenav a, .onThisPage, .closebtn {font-size: 24px}
  }
 
 .dropCap {
