@@ -156,7 +156,7 @@ margin-bottom: 14vh;
     .sidenav a, .closebtn, .onThisPage {font-size: 3vmax}
     }
 @media only screen and (max-width: 800px) {
-    .next {left: 95%;}
+    .next {left: 93%;}
     }
 img {width: 100%}
 
