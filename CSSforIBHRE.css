@@ -51,7 +51,7 @@ margin-bottom: 14vh;
 
 /*menu*/
 .sidenav {
-    height: auto; overflow: auto;
+    height: auto; 
     width: 0;
     position: fixed;
     font-size: 3vmax;
@@ -66,7 +66,7 @@ margin-bottom: 14vh;
 }
 .sidenav a {
     padding: 2vh 2vmax 1vh 2vmax;
-    text-decoration: none;
+    text-decoration: none; overflow-y : auto;
     border-bottom: #ffc30b 0.2vmin solid;
     font-size: 2vmax;
     color: #191301;
