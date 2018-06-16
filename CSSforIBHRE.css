@@ -147,15 +147,13 @@ margin-bottom: 14vh;
 
 .next {
     position: absolute; display: inline;
-    left: 96%;
+    left: 98vw; max-width: 2vw;
     background-color: transparent;
     color: transparent;
 }
 
 @media only screen and (max-width: 600px){
     .sidenav a, .closebtn, .onThisPage {font-size: 3vmax}
-    .toTop {top: 95%; left: 2%}    
-    .next {left: 92%}
 }
 img {width: 100%}
 
