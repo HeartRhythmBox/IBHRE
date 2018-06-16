@@ -154,9 +154,8 @@ margin-bottom: 14vh;
 
 @media only screen and (max-width: 600px){
     .sidenav a, .closebtn, .onThisPage {font-size: 3vmax}
-    .toTop {top: 95%; right: 5%}    
-    .next {right: 5%}
+    .toTop {top: 95%; right: 10%}    
+    .next {left: 90%}
 }
-
 img {width: 100%}
 
