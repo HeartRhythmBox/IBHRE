@@ -147,7 +147,7 @@ margin-bottom: 14vh;
 
 .next {
     position: absolute; display: inline;
-    left: 97vw; max-width: 2vw;
+    left: 96vw; 
     background-color: transparent;
     color: transparent;
 }
