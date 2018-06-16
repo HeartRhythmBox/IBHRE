@@ -15,7 +15,7 @@ function scroll() {
         hamburger.style.backgroundColor = "transparent";
         hamburger.style.fontSize = "1.5vmax";
         title.style.display="none";
-        topArr[0].style.display="block"}
+        topArr[0].style.display="inline"}
        
     else {
         hamburger.style.width="100%";
