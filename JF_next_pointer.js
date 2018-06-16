@@ -3,7 +3,7 @@
 function next(n) {
     var block = document.getElementsByClassName("block");
     block[n].scrollIntoView({behavior:"smooth", block:"start", inline:"start"});
-    }
+            }
 
 //pointer
 function pointer() {

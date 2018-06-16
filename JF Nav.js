@@ -10,6 +10,7 @@ function scroll() {
     hamburger = document.getElementById("topnav");
     title = document.getElementById("topnavTxt");
     topArr = document.getElementsByClassName("toTop");
+    
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
         hamburger.style.width="fit-content";
         hamburger.style.backgroundColor = "transparent";
