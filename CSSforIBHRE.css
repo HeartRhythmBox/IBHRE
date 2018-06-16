@@ -51,7 +51,7 @@ margin-bottom: 14vh;
 
 /*menu*/
 .sidenav {
-    height: auto;
+    height: auto; overflow: auto;
     width: 0;
     position: fixed;
     font-size: 3vmax;
