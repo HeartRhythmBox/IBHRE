@@ -152,9 +152,9 @@ margin-bottom: 14vh;
     color: transparent;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 800px){
     .sidenav a, .closebtn, .onThisPage {font-size: 3vmax}
-    .toTop {top: 95%; left: 5%}    
+    .toTop {top: 95%; left: 2%}    
     .next {left: 95%}
 }
 img {width: 100%}
