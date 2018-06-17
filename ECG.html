@@ -124,8 +124,8 @@ onclick="openNav()">&#9776;
                 onclick="showCell('basicECG')"></i>
                 </div>
             </div>
-            <div class="w3-container w3-cell" id="basicECG" style="display: none">
-                    Basic ECG
+            <div class="w3-container w3-cell w3-cell-middle w3-center" id="basicECG" style="display: none;">
+                <img src="media/EKG/basic ECG.png" style="vertical-align: middle">
             </div>
 
 
@@ -201,6 +201,14 @@ window.addEventListener("keydown", function(event) {
 
 
 window.onscroll = function() {scroll()};
+window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===27) {
+        window.unblur()}
+    })
+
+window.ontouchmove = function () {unblur()};
+
 
 var slideIndex = [1,1,1];
 var slideID = ['slideSet0', 'slideSet1', 'slideSet2'];
