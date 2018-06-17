@@ -74,7 +74,7 @@ onclick="openNav()">&#9776;
     Fundamental of Electrophysiology</span></div>
 
 <div>
-    <a href="#top" title="to the top" class="toTop">
+    <a href="#top" title="to the top" class="toTop" onclick="unblur()">
         <i class="fas fa-arrow-circle-up" style="font-size: 2.8vmax"></i>
     </a>
 </div>
@@ -544,6 +544,13 @@ window.addEventListener("keydown", function(event) {
         var p = document.getElementsByClassName("pointer");
         p[0].style.display = "none";}
     })
+
+window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===27) {
+        window.unblur()}
+    })
+window.addEventListener("ontouchmove", unblur());
 
 
 window.onscroll = function() {scroll()};

@@ -1,5 +1,10 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "auto";
+    var b = document.getElementsByClassName("block");
+    var i;
+    for (i=0;i<b.length;i++){
+        b[i].style.opacity = 1;
+    }
     }
 
 function closeNav() {
