@@ -14,8 +14,10 @@
 
 <style>
 .imgBox {
-  padding: 2vmax;object-fit: contain;max-height: 85vh;
+  padding-top: 0.2vmax;
+  object-fit: contain;max-height: 80vh;
 }
+
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
@@ -23,8 +25,13 @@
   height: 90vh;width: 100%;
 }
 
+@media only screen and (max-width: 600px){
+    .imgBox {height: auto};
+    .container {height: auto}
+}
+
 .caption {
-    display: none;padding: 2vmax;
+    display: none;padding: 0.5vmax; text-align: center;
     background-color: rgba(59, 89, 152,0.8);color: white
 }
 
@@ -115,8 +122,8 @@ onclick="openNav()">&#9776;
 <div class="block">
     <div class="w3-btn next" onmouseover="next(1)"></div>
     <div class="fullBlock darkBrown">
-        <div class="w3-cell-row">
-            <div class="w3-container w3-cell w3-center">
+        <div class="w3-cell-row w3-mobile">
+            <div class="w3-container w3-cell w3-center w3-mobile">
                 <div class="slabo h3 w3-center" style="padding-top: 40vh">The Basic</div>
                 <div class="w3-btn w3-round-xxlarge w3-padding-small" 
             style="border: #ffcf3b solid 0.1vmax; margin: 1vmax;">
@@ -124,7 +131,8 @@ onclick="openNav()">&#9776;
                 onclick="showCell('basicECG')"></i>
                 </div>
             </div>
-            <div class="w3-container w3-cell w3-cell-middle w3-center" id="basicECG" style="display: none;">
+            <div class="w3-container w3-cell w3-cell-middle w3-center w3-mobile" id="basicECG" 
+            style="display: none;padding-top: 10%">
                 <img src="media/EKG/basic ECG.png" style="vertical-align: middle">
             </div>
 
@@ -138,7 +146,7 @@ onclick="openNav()">&#9776;
 <!--2Blk Brady-->
 <div class="block">
     <div class="w3-btn next" onmouseover="next(2)"></div>   
-    <div class="w3-row w3-padding-small w3-center slabo h6 w3-light-grey darkGTxt w3-round-xxlarge w3-mobile" style="margin: 1vw">
+    <div class="w3-row w3-padding-small w3-center slabo h5 yellow w3-round-xxlarge w3-mobile" style="margin: 0.5vw">
     Bradyarrhythmias</div>
     <div class="ref w3-center roboto">(mouse over image to show info)</div>
 <!--slideset0-->
@@ -150,34 +158,235 @@ onclick="openNav()">&#9776;
         <!--brady1-->
         <div class="slideSet0">
         
-        <div class="w3-display-container">
-            <img src="media/EP/II.png" style="cursor: pointer;" onmouseover="showCell('sss')"
-            onmouseout="hideCell('sss')" class="imgBox" >
-        <div class="w3-display-bottomleft roboto h6 w3-mobile caption" id='sss'> 
-            hover to show 'sss'
+        <div class="w3-container">
+            <img src="media/EKG/brady/1AVB.png" style="cursor: pointer;" onmouseover="showCell('1AVB')"
+            onmouseout="hideCell('1AVB')" class="imgBox" >
+        <span class="roboto h6 w3-mobile caption" id='1AVB'> 
+            1st degree AV block. In a severe case (PR>...), symptoms similar to pacemaker syndrome may occur.
+            </span>
         </div>
+        </div>        
         
-        </div></div>
 
         <!--brady2-->
         <div class="slideSet0">
-            <div class="w3-display-container">
-                <img src="media/EP/III.png" style="cursor: pointer;" onmouseover="showCell('ssss')"
-                onmouseout="hideCell('ssss')" class="imgBox" >
-                <div class="w3-display-bottomleft roboto h6 w3-mobile caption" id='ssss'> 
-                    hover to show 'sss'
-                </div>
+            <div class="w3-container">
+                <img src="media/EKG/brady/AVW2.JPG" style="cursor: pointer;" onmouseover="showCell('AVW')"
+                onmouseout="hideCell('AVW')" class="imgBox" >
+                <span class="roboto h6 w3-mobile caption" id='AVW'> 
+                    Mobitz I or Wenckebach. Pacemaker is indicated if symptomatic.</span>
+                
             </div>
           </div>
-  
+
+        <!--brady3-->
+        <div class="slideSet0">
+            <div class="w3-container">
+                <img src="media/EKG/brady/high grade atropine.png" style="cursor: pointer;" onmouseover="showCell('CHB')"
+                onmouseout="hideCell('CHB')" class="imgBox" >
+                <span class="roboto h6 w3-mobile caption" id='CHB'> 
+                    Complete heart block with slow escape rate; RBBB morphology.</span>
+                
+            </div>
+        </div>
+        
+        <!--brady4-->
+        <div class="slideSet0">
+            <div class="w3-container">
+                <img src="media/EKG/brady/intermittent CHB.png" style="cursor: pointer;" 
+                onmouseover="showCell('iCHB')" onmouseout="hideCell('iCHB')" class="imgBox" >
+                <span class="roboto h6 w3-mobile caption" id='iCHB'> 
+                    intermittent complete heart block. 2Ps without any QRS.</span>
+                
+            </div>
+        </div>
+
+        <!--brady5-->
+        <div class="slideSet0">
+            <div class="w3-container">
+                <img src="media/EKG/brady/3FB.jpg" style="cursor: pointer;" 
+                onmouseover="showCell('3FB')" onmouseout="hideCell('3FB')" class="imgBox" >
+                <span class="roboto h6 w3-mobile caption" id='3FB'> 
+                    Bifascicular block with 1st degree AV block. Pacemaker is indicated (IIa) in 
+                    a patient with unexplained syncope.</span>
+                
+            </div>
+        </div>
+
+        <!--brady6-->
+        <div class="slideSet0">
+            <div class="w3-container">
+                <img src="media/EKG/brady/sinus pause.jpg" style="cursor: pointer;" 
+                onmouseover="showCell('pause')" onmouseout="hideCell('pause')" class="imgBox" >
+                <span class="roboto h6 w3-mobile caption" id='pause'> 
+                    Sinus pause</span>
+                
+            </div>
+        </div>
+
+        <!--brady7-->
+        <div class="slideSet0">
+            <div class="w3-container">
+                <img src="media/EKG/brady/SA block.jpg" style="cursor: pointer;" 
+                onmouseover="showCell('SABlk')" onmouseout="hideCell('SABlk')" class="imgBox" >
+                <span class="roboto h6 w3-mobile caption" id='SABlk'> 
+                    Sinoatrial exit block type II. </span>
+                
+            </div>
+        </div>
+
       <a class="prevS" onclick="plusSlides(-1,0)">❮</a>
       <a class="nextS" onclick="plusSlides(1,0)">❯</a>
  
     </div>
 </div>
 
+<!--3Blk Tachy-->
+<div class="block">
+    <div class="w3-btn next" onmouseover="next(3)"></div>   
+    <div class="w3-row w3-padding-small w3-center slabo h5 red w3-round-xxlarge w3-mobile" style="margin: 0.5vw">
+    Tachyarrhythmias</div>
+    <div class="ref w3-center roboto">(mouse over image to show info)</div>
+
+<!--slideset1-->
+    <div class="container" style="margin-top: 2vh">
+        <div class="progress-container">
+            <div class="progress-bar"></div>  
+            </div>
+            
+        <!--tachy1-->
+        <div class="slideSet1">
+        
+        <div class="w3-container">
+            <img src="media/EKG/tachy/AF.png" style="cursor: pointer;" onmouseover="showCell('af')"
+            onmouseout="hideCell('af')" class="imgBox" >
+        <span class="roboto h6 w3-mobile caption" id='af'> 
+            Atrial Fibrillation: irregularly irregular rhythm. Noted with fibrillatory waves in V1.
+            </span>
+        </div>
+        </div>   
+
+        <!--tachy2-->
+        <div class="slideSet1">
+        
+            <div class="w3-container">
+                <img src="media/EKG/tachy/svt w st depression.JPG" style="cursor: pointer;" 
+                onmouseover="showCell('svt')" onmouseout="hideCell('svt')" class="imgBox" >
+            <span class="roboto h6 w3-mobile caption" id='svt'> 
+                Supraventricular tachycardia (SVT): Narrow complex tachycardia with no visible P wave.
+                </span>
+            </div>
+            </div>   
+
+        <!--tachy3-->
+        <div class="slideSet1">
+        
+            <div class="w3-container">
+                <img src="media/EKG/tachy/Brady induced PVT.png" style="cursor: pointer;" 
+                onmouseover="showCell('pvt')" onmouseout="hideCell('pvt')" class="imgBox" >
+            <span class="roboto h6 w3-mobile caption" id='pvt'> 
+                Polymorphic VT with long QT or Torsade de Pointes.
+                </span>
+            </div>
+            </div>  
+        
+        <!--tachy4-->
+        <div class="slideSet1">
+        
+            <div class="w3-container">
+                <img src="media/EKG/tachy/RVOT VT.JPG" style="cursor: pointer;" 
+                onmouseover="showCell('rvot')" onmouseout="hideCell('rvot')" class="imgBox" >
+            <span class="roboto h6 w3-mobile caption" id='rvot'> 
+                Idiopathic VT from RV outflow tract. Noted with positive QRS in II, III, and aVF;
+                normal R wave progression in chest leads.
+                </span>
+            </div>
+            </div>  
+
+        <!--tachy5-->
+        <div class="slideSet1">
+        
+            <div class="w3-container">
+                <img src="media/EKG/tachy/VT EKG.jpg" style="cursor: pointer;" 
+                onmouseover="showCell('vt')" onmouseout="hideCell('vt')" class="imgBox" >
+            <span class="roboto h6 w3-mobile caption" id='vt'> 
+                Ischemic VT in a patient with history of inferior wall MI.
+                </span>
+            </div>
+            </div>  
+
+        <a class="prevS" onclick="plusSlides(-1,1)">❮</a>
+        <a class="nextS" onclick="plusSlides(1,1)">❯</a>
+    </div>     
+</div>
 
 
+<!--4Blk SCD-->
+<div class="block">
+    <div class="w3-btn next" onmouseover="next(4)"></div>   
+    <div class="w3-row w3-padding-small w3-center slabo h5 blue w3-round-xxlarge w3-mobile" style="margin: 0.5vw">
+    Conditions with risk of sudden cardiac arrest</div>
+    <div class="ref w3-center roboto">(mouse over image to show info)</div>
+
+<!--slideset2-->
+    <div class="container" style="margin-top: 2vh">
+        <div class="progress-container">
+            <div class="progress-bar"></div>  
+            </div>
+            
+        <!--SCD1-->
+        <div class="slideSet2">
+        
+        <div class="w3-container">
+            <img src="media/EKG/SCD/Brugada EKG.png" style="cursor: pointer;" onmouseover="showCell('brugada')"
+            onmouseout="hideCell('brugada')" class="imgBox" >
+        <span class="roboto h6 w3-mobile caption" id='brugada'> 
+            Brugada ECG: J point elevation with coved-ST elevation in V1-V2.
+            </span>
+        </div>
+        </div>   
+
+        <!--SCD2-->
+        <div class="slideSet2">
+        
+            <div class="w3-container">
+                <img src="media/EKG/SCD/HCM.jpg" style="cursor: pointer;" onmouseover="showCell('hcm')"
+                onmouseout="hideCell('hcm')" class="imgBox" >
+            <span class="roboto h6 w3-mobile caption" id='hcm'> 
+                Hypertrophic cardiomyopathy: high voltage in left-sided leads with ST depression and 
+                T wave inversion.
+                </span>
+            </div>
+            </div> 
+            
+        <!--SCD3-->
+        <div class="slideSet2">
+        
+            <div class="w3-container">
+                <img src="media/EKG/SCD/LQT1_broad based T.png" style="cursor: pointer;" onmouseover="showCell('lqt')"
+                onmouseout="hideCell('lqt')" class="imgBox" >
+            <span class="roboto h6 w3-mobile caption" id='lqt'> 
+                Long QT syndrome.
+                </span>
+            </div>
+            </div> 
+
+        <!--SCD4-->
+        <div class="slideSet2">
+        
+            <div class="w3-container">
+                <img src="media/EKG/SCD/Old MI w 1AVB.png" style="cursor: pointer;" onmouseover="showCell('oldMI')"
+                onmouseout="hideCell('oldMI')" class="imgBox" >
+            <span class="roboto h6 w3-mobile caption" id='oldMI'> 
+                Old MI; Noted with Q waves in inferior and anterior leads.
+                </span>
+            </div>
+            </div> 
+
+        <a class="prevS" onclick="plusSlides(-1,2)">❮</a>
+        <a class="nextS" onclick="plusSlides(1,2)">❯</a>
+    </div>     
+</div>
 
 
 <!--end Div pointer-->

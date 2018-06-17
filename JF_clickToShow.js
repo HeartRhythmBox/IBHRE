@@ -12,6 +12,10 @@ function showCell(name){
     document.getElementById(name).style.display = "block";
 }
 
+function hideCell(name){
+    document.getElementById(name).style.display = "none";
+}
+
 function toggle(c,n) {
     var className = document.getElementsByClassName(c);
     var i;
