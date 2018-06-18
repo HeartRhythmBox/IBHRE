@@ -66,7 +66,7 @@ margin-bottom: 14vh;
     
 }
 .sidenav a {
-    padding: 2vh 2vmax 1vh 2vmax;
+    padding: 1vh 1vmax 0.5vh 1vmax;
     text-decoration: none; overflow-y : auto;
     border-bottom: #ffc30b 0.2vmin solid;
     font-size: 2vmax;
@@ -138,7 +138,7 @@ margin-bottom: 14vh;
     background-color: #fc553d;
     border-radius: 50%;
     position: fixed;  
-    z-index: 1;
+    z-index: 4;
     animation: blink 1.5s linear infinite;
     }
     @keyframes blink{

@@ -13,9 +13,11 @@
 
 
 <style>
+
+.block {margin-top: 20vh}
 .imgBox {
   padding-top: 0.2vmax;
-  object-fit: contain;max-height: 80vh;
+  object-fit: contain;max-height: 85vh;
 }
 
 
@@ -25,19 +27,39 @@
   height: 90vh;width: 100%;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 960px){
     .imgBox {max-height: fit-content}
-    .container {height: auto;}
+    .container {height: auto;border: #a9a9a9 solid 0.4vmax;}
 }
 
+
 .caption {
-    display: none;padding: 0.5vmax; text-align: center;
+    display: none;padding: 0.5vmax 3vmax 0.5vmax 1vmax; text-align: center;
     background-color: rgba(59, 89, 152,0.8);color: white
+    }
+
+.moreInfo {
+    background-color: #332702;color: white;
+    font-size: 2vmax; margin: 1vmax; padding: 0.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.modalClose {
+    background-color: white;
+    font-size: 2vmax;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+.w3-modal-content {
+    width: 80%;
+}
+.imgLabel {
+    background-color: black; color: #ffcf3b;
+    margin-top: 1vmax; padding: 0.5vmax;
+    font-size: 2vmax;
 }
 
 /* Hide the images by default */
 .slideSet0, slideSet1, slideSet2 {
-  display: none; padding: 0.5vmax;
+  display: none; padding: 1vmax;
 }
 
 
@@ -85,16 +107,17 @@
 
 <body>
 
-<div id="mySidenav" class="sidenav roboto" style="font-size: 3vmax">
+<div id="mySidenav" class="sidenav roboto">
     <a href="javascript:void(0)" class="closebtn roboto" onclick="closeNav()">&times;</a>
     <a href="index.html" style="font-weight: 700;">HOME</a>
     <a href="EP.html" >Fundamental EP</a>
     <a href="ECG.html" class="active">ECGs</a>
     <a href="#">Clinical Practice</a>
     <span class="onThisPage">on this page</span>
-    <a href="#basic" style="text-align: right;">Basic</a>
-    <a href="#clinical" style="text-align: right;">AADs</a>
-    <a href="#QA" style="text-align: right;">Qs&As</a>
+    <a href="#Brady" style="text-align: right;">Brady</a>
+    <a href="#Tachy" style="text-align: right;">Tachy</a>
+    <a href="#SCA" style="text-align: right;">SCA</a>
+    <a href="#Device" style="text-align: right;">Device</a>
     <a href="https://www.facebook.com/HeartRhythmBox/" style="border-top: #332702 0.2vmin solid">
         <i title="@HeartRhythmBox" class="fab fa-facebook" 
             style="color:  #3B5998; border: transparent;"></i>&nbspHeartRhythmBox</a>
@@ -105,7 +128,7 @@
 
 <div id="topnav"  class="topnav" style="font-size:2.5vmax;cursor:pointer;" 
 onclick="openNav()">&#9776;
-<span id="topnavTxt" class="slabo darkGTxt h5 w3-mobile w3-padding">
+<span id="topnavTxt" class="slabo darkGTxt h5 w3-mobile w3-padding" style="display: inline;">
     Essential ECGs for IBHRE</span></div>
 
 <div>
@@ -144,9 +167,9 @@ onclick="openNav()">&#9776;
     
 
 <!--2Blk Brady-->
-<div class="block">
+<div class="block" id="Brady">
     <div class="w3-btn next" onmouseover="next(2)"></div>   
-    <div class="w3-row w3-padding-small w3-center slabo h5 yellow w3-round-xxlarge w3-mobile" style="margin: 0.5vw">
+    <div class="w3-row w3-padding-small w3-center slabo h5 yellow w3-round-xxlarge w3-mobile" style="margin: 1vw">
     Bradyarrhythmias</div>
     <div class="ref w3-center roboto">(mouse over image to show info)</div>
 <!--slideset0-->
@@ -162,7 +185,8 @@ onclick="openNav()">&#9776;
             <img src="media/EKG/brady/1AVB.png" style="cursor: pointer;" onmouseover="showCell('1AVB')"
             onmouseout="hideCell('1AVB')" class="imgBox" >
         <span class="roboto h6 w3-mobile caption" id='1AVB'> 
-            1st degree AV block. In a severe case (PR>...), symptoms similar to pacemaker syndrome may occur.
+            1st degree AV block. In a severe case (PR>330ms), symptoms similar to pacemaker syndrome 
+            may occur.
             </span>
         </div>
         </div>        
@@ -184,8 +208,24 @@ onclick="openNav()">&#9776;
             <div class="w3-container">
                 <img src="media/EKG/brady/high grade atropine.png" style="cursor: pointer;" onmouseover="showCell('CHB')"
                 onmouseout="hideCell('CHB')" class="imgBox" >
+                <div class="w3-display-topright w3-button w3-round w3-mobile h6 moreInfo"
+                onclick="showCell('RBBB')">
+                more info</div>
+            <div id="RBBB" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container w3-center">
+                        <span onclick="hideCell('RBBB')" 
+                        class="w3-button w3-display-topright roboto modalClose">
+                            &times;</span>
+                        <img src="media/EKG/brady/modal/RBBB.png" style="width: 70%;">
+                        <div class="ref">
+                            <a href="http://www.ovid.com/site/catalog/books/5836.jsp#horizontalTab1">
+                            Baltazar RF. Basic and Bedside Electrocardiography</a></div>
+                    </div>
+                </div>
+            </div>
                 <span class="roboto h6 w3-mobile caption" id='CHB'> 
-                    Complete heart block with slow escape rate; RBBB morphology.</span>
+                    Complete heart block. Escape rate is slow with RBBB and LPFB morphology.</span>
                 
             </div>
         </div>
@@ -195,8 +235,10 @@ onclick="openNav()">&#9776;
             <div class="w3-container">
                 <img src="media/EKG/brady/intermittent CHB.png" style="cursor: pointer;" 
                 onmouseover="showCell('iCHB')" onmouseout="hideCell('iCHB')" class="imgBox" >
+            
                 <span class="roboto h6 w3-mobile caption" id='iCHB'> 
-                    intermittent complete heart block. 2Ps without any QRS.</span>
+                    intermittent complete heart block. 2Ps without any QRS. Underlying 
+                    rhythm is sinus rhythm with RBBB and LAFB.</span>
                 
             </div>
         </div>
@@ -206,6 +248,24 @@ onclick="openNav()">&#9776;
             <div class="w3-container">
                 <img src="media/EKG/brady/3FB.jpg" style="cursor: pointer;" 
                 onmouseover="showCell('3FB')" onmouseout="hideCell('3FB')" class="imgBox" >
+                <div class="w3-display-topright w3-button w3-round w3-mobile h6 moreInfo"
+                    onclick="showCell('3FBinfo')">
+                    more info</div>
+                <div id="3FBinfo" class="w3-modal">
+                    <div class="w3-modal-content">
+                        <div class="w3-container w3-center">
+                            <span onclick="hideCell('3FBinfo')" 
+                            class="w3-button w3-display-topright roboto modalClose">
+                                &times;</span>
+                            <img src="media/EKG/brady/modal/LAFB.png" style="width: 80%" 
+                                class="w3-bottombar w3-border-blue w3-padding">
+                            <img src="media/EKG/brady/modal/LPFB.png" style="width: 80%">
+                            <div class="ref">
+                                <a href="http://www.ovid.com/site/catalog/books/5836.jsp#horizontalTab1">
+                                Baltazar RF. Basic and Bedside Electrocardiography</a></div>
+                        </div>
+                    </div>
+                </div>
                 <span class="roboto h6 w3-mobile caption" id='3FB'> 
                     Bifascicular block with 1st degree AV block. Pacemaker is indicated (IIa) in 
                     a patient with unexplained syncope.</span>
@@ -229,8 +289,29 @@ onclick="openNav()">&#9776;
             <div class="w3-container">
                 <img src="media/EKG/brady/SA block.jpg" style="cursor: pointer;" 
                 onmouseover="showCell('SABlk')" onmouseout="hideCell('SABlk')" class="imgBox" >
+                <div class="w3-display-topright w3-button w3-round w3-mobile h6 moreInfo"
+                    onclick="showCell('SABinfo')">
+                    more info</div>
+                <div id="SABinfo" class="w3-modal">
+                    <div class="w3-modal-content">
+                        <div class="w3-container w3-center">
+                            <span onclick="hideCell('SABinfo')" 
+                            class="w3-button w3-display-topright roboto modalClose">
+                                &times;</span>
+                            <img src="media/EKG/brady/modal/SA Block.png">
+                            <div class="ref">
+                            <a href="http://www.ovid.com/site/catalog/books/5836.jsp#horizontalTab1">
+                            Baltazar RF. Basic and Bedside Electrocardiography</a>
+                            and <a href="http://dl4a.org/uploads/pdf/Crawford%20Current%20Cardiology%20Edition%202.pdf">
+                            Crawford MH. Current diagnosis and treatment in cardiology.</a>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <span class="roboto h6 w3-mobile caption" id='SABlk'> 
-                    Sinoatrial exit block type II. </span>
+                    Sinoatrial exit block type II. Intermittent sinus pauses with the
+                pause interval equals to the exact multiple of the preceding PP interval.
+                In this case, the pause is 2x of PP.</span>
                 
             </div>
         </div>
@@ -242,9 +323,9 @@ onclick="openNav()">&#9776;
 </div>
 
 <!--3Blk Tachy-->
-<div class="block">
+<div class="block" id="Tachy">
     <div class="w3-btn next" onmouseover="next(3)"></div>   
-    <div class="w3-row w3-padding-small w3-center slabo h5 red w3-round-xxlarge w3-mobile" style="margin: 0.5vw">
+    <div class="w3-row w3-padding-small w3-center slabo h5 red w3-round-xxlarge w3-mobile" style="margin: 1vw">
     Tachyarrhythmias</div>
     <div class="ref w3-center roboto">(mouse over image to show info)</div>
 
@@ -273,7 +354,7 @@ onclick="openNav()">&#9776;
                 <img src="media/EKG/tachy/svt w st depression.JPG" style="cursor: pointer;" 
                 onmouseover="showCell('svt')" onmouseout="hideCell('svt')" class="imgBox" >
             <span class="roboto h6 w3-mobile caption" id='svt'> 
-                Supraventricular tachycardia (SVT): Narrow complex tachycardia with no visible P wave.
+                Supraventricular tachycardia (SVT): Narrow complex tachycardia with no clearly visible P wave.
                 </span>
             </div>
             </div>   
@@ -322,10 +403,10 @@ onclick="openNav()">&#9776;
 
 
 <!--4Blk SCD-->
-<div class="block">
+<div class="block" id="SCA">
     <div class="w3-btn next" onmouseover="next(4)"></div>   
-    <div class="w3-row w3-padding-small w3-center slabo h5 blue w3-round-xxlarge w3-mobile" style="margin: 0.5vw">
-    Conditions with risk of sudden cardiac arrest</div>
+    <div class="w3-row w3-padding-small w3-center slabo h5 blue w3-round-xxlarge w3-mobile" style="margin: 1vw">
+    Conditions with risk for sudden cardiac arrest</div>
     <div class="ref w3-center roboto">(mouse over image to show info)</div>
 
 <!--slideset2-->
@@ -341,7 +422,7 @@ onclick="openNav()">&#9776;
             <img src="media/EKG/SCD/Brugada EKG.png" style="cursor: pointer;" onmouseover="showCell('brugada')"
             onmouseout="hideCell('brugada')" class="imgBox" >
         <span class="roboto h6 w3-mobile caption" id='brugada'> 
-            Brugada ECG: J point elevation with coved-ST elevation in V1-V2.
+            Brugada ECG: J point elevation with coved-type ST elevation in V1-V2.
             </span>
         </div>
         </div>   
@@ -383,8 +464,115 @@ onclick="openNav()">&#9776;
             </div>
             </div> 
 
+        <!--SCD5-->
+        <div class="slideSet2">
+        
+            <div class="w3-container">
+                <div class="w3-row" style="cursor: pointer;" onmouseover="showCell('wpw')"
+                onmouseout="hideCell('wpw')" class="imgBox">
+                    <div class="w3-container w3-cell w3-cell-middle w3-center w3-padding">
+                    <img src="media/EKG/SCD/WPW resting.png"></div>
+                    <div class="w3-container w3-cell w3-cell-middle w3-center w3-padding">
+                    <img src="media/EKG/SCD/WPW AF.png"></div>
+                </div>
+            <span class="roboto h6 w3-mobile caption" id='wpw'> 
+                Left: sinus rhythm with pre-excitation (delta wave; slurred QRS upstroke) = WPW EKG. <br>
+                Right: AF with extremely fast conduction via accessory pathway or AF with WPW.
+                </span>
+            </div>
+        </div>
+
+        <!--SCD6-->
+        <div class="slideSet2">
+                
+            <div class="w3-container">
+                <img src="media/EKG/SCD/ARVD.png" style="cursor: pointer;" onmouseover="showCell('arvd')"
+                onmouseout="hideCell('arvd')" class="imgBox" >
+                
+            <span class="roboto h6 w3-mobile caption" id='arvd'> 
+                Arrhythmogenic right ventricular dysplasia (ARVD), a disease of right ventricule.
+                Characteristic ECG findings include Epsilon wave (delay in depolarization) and 
+                T wave inversion in V1-V4.
+                <div class="ref">
+                    <a href="http://circ.ahajournals.org/content/120/6/477.long">
+                    Jain et al. Circulation 2009.</a>
+                </div>
+                </span>
+            </div>
+            </div>  
+
+    
+
         <a class="prevS" onclick="plusSlides(-1,2)">❮</a>
         <a class="nextS" onclick="plusSlides(1,2)">❯</a>
+    </div>     
+</div>
+
+<!--5Blk Device-->
+<div class="block" id="Device">
+    <div class="w3-btn next" onmouseover="next(3)"></div>   
+    <div class="w3-row w3-padding-small w3-center slabo h5 w3-green w3-round-xxlarge w3-mobile" style="margin: 1vw">
+    Device related</div>
+    <div class="ref w3-center roboto">(mouse over image to show info)</div>
+
+    <!--slideset3-->
+      <div class="container" style="margin-top: 2vh">
+        <div class="progress-container">
+            <div class="progress-bar"></div>  
+            </div>
+    
+    <!--device1-->
+    <div class="slideSet3">
+        
+        <div class="w3-container">
+            <img src="media/EKG/device/V lead no capture.JPG" style="cursor: pointer;" onmouseover="showCell('d1')"
+            onmouseout="hideCell('d1')" class="imgBox" >
+            <div class="w3-display-topmiddle roboto imgLabel">1 week after implantation</div>
+        <span class="roboto h6 w3-mobile caption" id='d1'> 
+            Dual chamber pacemaker with failure to sense and pace of V lead. <br>
+            Given the timing of 1wk after implantation, lead dislodgement is most likely.
+        </span>
+        </div>
+    </div>   
+
+    <!--device2-->
+    <div class="slideSet3">
+        
+        <div class="w3-container">
+            <img src="media/EKG/device/Lead Fx 1800 ohms.JPG" style="cursor: pointer;" onmouseover="showCell('fx')"
+            onmouseout="hideCell('fx')" class="imgBox" >
+            <div class="w3-display-topmiddle roboto imgLabel">s/p VVI 10years+</div>
+        <span class="roboto h6 w3-mobile caption" id='fx'> 
+            Single chamber pacemaker with failure to sense and pace of V lead. <br>
+            Given the timing of 10years after implantation, lead fracture, insulation break, or
+            battery depletion are possible. In this case, lead impedance was 1800 Ohm, so lead fracture
+            was the cause.
+        </span>
+        </div>
+    </div>   
+
+    <!--device3-->
+    <div class="slideSet3">
+        
+        <div class="w3-container">
+            <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">DDD 50/110 AVD 170.
+                What happens between the top and bottom tracings?
+                </div>
+            <span style="cursor: pointer;" onmouseover="showCell('d3')"
+            onmouseout="hideCell('d3')" class="imgBox" >
+            <img src="media/EKG/device/PPM lead switch DDD 50_110_170.JPG" style="padding: 1vmax">
+            <img src="media/EKG/device/PPM lead switch after.JPG" style="padding: 1vmax">
+            </span>
+            
+        <span class="roboto h6 w3-mobile caption" id='d3'> 
+            Single chamber pacemaker with failure to sense and pace of V lead. <br>
+         </span>
+        </div>
+    </div>   
+
+
+        <a class="prevS" onclick="plusSlides(-1,3)">❮</a>
+        <a class="nextS" onclick="plusSlides(1,3)">❯</a>
     </div>     
 </div>
 
@@ -419,9 +607,9 @@ window.addEventListener("keydown", function(event) {
 window.ontouchmove = function () {unblur()};
 
 
-var slideIndex = [1,1,1];
-var slideID = ['slideSet0', 'slideSet1', 'slideSet2'];
-showSlides(1,0);showSlides(1,1);showSlides(1,2);
+var slideIndex = [1,1,1,1];
+var slideID = ['slideSet0', 'slideSet1', 'slideSet2','slideSet3'];
+showSlides(1,0);showSlides(1,1);showSlides(1,2);showSlides(1,3);
 
 
 function plusSlides(n, set) {
