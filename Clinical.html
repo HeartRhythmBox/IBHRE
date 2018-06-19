@@ -68,7 +68,7 @@ onclick="openNav()">&#9776;
     
     <div class="w3-row slabo h2 w3-center" style="padding-top: 25vh; line-height: 45%">
         Device-related </div>
-    <div class="w3-row roboto h4 bold w3-center" style="color: #a7a7a7; opacity: 0.6; 
+    <div class="w3-row roboto h4 bold w3-center" style="color: #808080; opacity: 0.6; 
     font-style: italic; letter-spacing: 1vw;">
         GUIDELINES</div>      
        
@@ -107,18 +107,26 @@ onclick="openNav()">&#9776;
 <!--2Blk Ap w EKG-->
 <div class="block">
     <div class="w3-btn next" onmouseover="next(2)"></div>
-    <div class="w3-cell-row w3-padding w3-mobile red">
-        <div class="w3-cell w3-center w3-cell-middle w3-text-white w3-padding w3-mobile w3-container slabo h4">Phase 0 = QRS, 
-            <br>the rest is for ST-T.
-            <div class="ref w3-row" style="color: lightgray">
-                <a href="https://drsvenkatesan.com/2009/08/26/
-                why-ecg-is-greatly-influensed-by-serum-potasium-levels-and-least-affected-by-serum-sodium-levels/
-                action-potential-ecg-phase-0-sodium-potasium-depolaristion-repolarisation/">
-                    Dr.S.Venkatesan, MD; Expressions in cardiology</a>
-            </div>
-        </div>
-        <div class="w3-cell w3-center w3-padding w3-container">
-            <img src="media/EP/AP w EKG.jpg" style="padding: 2vmax">
+    <div class="w3-row h6 roboto bold" style="padding-left: 1vw; color: #808080">
+        PACEMAKER <span style="color: red; font-size: 4vmax">.</span>
+        <span class="h6 roboto" style="color: #808080">
+            indications
+        </span>
+    </div>
+    <div class="w3-row">
+        <div class="w3-col s6 darkBrown slabo h4" style="padding: 20vh 1vw 1vw 1vw; text-align: right;
+        cursor: pointer; height: 90vh; color: #ffcf3b" onclick="showCell('symptomatic')">
+            <span class="bold">S</span>ymptomatic
+            <ul class="w3-ul h6 roboto greyTxt" id='symptomatic' style="display: none; padding-top: 5vh;
+            text-align: right">
+                <li>sinus node dysfunction</li>
+                <li>AV block</li>
+                <li>Carotid sinus hypersensitivity</li>
+            </ul>
+        </div>        
+        <div class="w3-col s6 slabo h4 w3-white" style="padding: 20vh 1vw 1vw 1vw;height: 90vh;
+        cursor: pointer;" onclick="showCell('asymptomatic')">
+            <span class="bold">A</span>symptomatic
         </div>
     </div>
     
