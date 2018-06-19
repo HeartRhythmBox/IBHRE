@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="CSSforIBHRE.css">
+<style>
+
+.colPad {
+    padding: 10vh 5vw 15vh 5vw;text-align:left;color: #808080;line-height: 110%;
+    letter-spacing: 0.4vw; font-size: 1.5vmax;
+}
+@media only screen and (max-width: 600px){
+    .colPad {padding: 2vmax}
+}
+.colPad a {text-decoration: none}
+.colPadH {
+    color: #2a389e; line-height: 120%; font-size: 2.5vmax;letter-spacing: 0.5vw;
+    text-align: justify;
+}
+
+</style>
+
+<body>
+
+<div id="mySidenav" class="sidenav roboto">
+    <a href="javascript:void(0)" class="closebtn roboto" onclick="closeNav()">&times;</a>
+    <a href="index.html" style="font-weight: 700;">HOME</a>
+    <a href="EP.html">Fundamental EP</a>
+    <a href="ECG.html">ECGs</a>
+    <a href="Clinical.html" class="active">Clinical Practice</a>
+    <span class="onThisPage">on this page</span>
+    <a href="#basic" style="text-align: right;">Basic</a>
+    <a href="#clinical" style="text-align: right;">Drugs</a>
+    <a href="#QA" style="text-align: right;">Qs&As</a>
+    <a href="https://www.facebook.com/HeartRhythmBox/" style="border-top: #332702 0.2vmin solid">
+        <i title="@HeartRhythmBox" class="fab fa-facebook" 
+            style="color:  #3B5998; border: transparent;"></i>&nbspHeartRhythmBox</a>
+    <a href="https://heartrhythmbox.github.io/main/">
+        <img src="box transparent.png" style="width: 3.5vh;" 
+        title="HeartRhythmBox - Main Page">&nbspOur Collection</a>
+</div>
+
+<div id="topnav"  class="topnav" style="font-size:2.5vmax;cursor:pointer;" 
+onclick="openNav()">&#9776;
+<span id="topnavTxt" class="slabo darkGTxt h5 w3-mobile w3-padding" style="display: inline">
+    Clinical Practice</span></div>
+
+<div>
+    <a href="#top" title="to the top" class="toTop" onclick="unblur()">
+        <i class="fas fa-arrow-circle-up" style="font-size: 2.8vmax"></i>
+    </a>
+</div>
+
+
+<!--pointer-->
+<div onclick="pointer()"><span class="pointer" style="display: none"></span>  
+
+<!--1Blk AP pre-test-->
+<div class="block yellowGd" style="margin: 0">
+    <div class="w3-btn next" onmouseover="next(1)"></div>
+    
+    <div class="w3-row slabo h2 w3-center" style="padding-top: 25vh; line-height: 45%">
+        Device-related </div>
+    <div class="w3-row roboto h4 bold w3-center" style="color: #a7a7a7; opacity: 0.6; 
+    font-style: italic; letter-spacing: 1vw;">
+        GUIDELINES</div>      
+       
+    <div class="w3-row w3-mobile">        
+        <div class="w3-col s4 colPad roboto w3-mobile">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0735109712054952?via%3Dihub">
+            2012 ACCF/AHA/HRS Focused Update Incorporated
+            Into the ACCF/AHA/HRS 2008 Guidelines for 
+            <div class="bold colPadH"> Device-Based Therapy </div>
+            of Cardiac Rhythm Abnormalities</a>
+        </div>
+
+        <div class="w3-col s4 colPad roboto w3-mobile">
+            <a href="http://circ.ahajournals.org/content/early/2017/10/30/CIR.0000000000000549">
+            2017 AHA/ACC/HRS Guideline for Management of Patients With
+            Ventricular Arrhythmias and the Prevention of 
+            <div class="bold colPadH">Sudden Cardiac Death</div>
+            </a>
+        </div>
+
+        <div class="w3-col s4 colPad roboto w3-mobile">
+            <a href="http://circ.ahajournals.org/content/early/2017/03/09/CIR.0000000000000499">
+                2017 ACC/AHA/HRS Guideline for the Evaluation and
+                Management of Patients With 
+            <div class="bold colPadH">Syncope</div>
+            </a>
+        </div>
+
+
+    </div> 
+          
+    
+</div>
+
+
+<!--2Blk Ap w EKG-->
+<div class="block">
+    <div class="w3-btn next" onmouseover="next(2)"></div>
+    <div class="w3-cell-row w3-padding w3-mobile red">
+        <div class="w3-cell w3-center w3-cell-middle w3-text-white w3-padding w3-mobile w3-container slabo h4">Phase 0 = QRS, 
+            <br>the rest is for ST-T.
+            <div class="ref w3-row" style="color: lightgray">
+                <a href="https://drsvenkatesan.com/2009/08/26/
+                why-ecg-is-greatly-influensed-by-serum-potasium-levels-and-least-affected-by-serum-sodium-levels/
+                action-potential-ecg-phase-0-sodium-potasium-depolaristion-repolarisation/">
+                    Dr.S.Venkatesan, MD; Expressions in cardiology</a>
+            </div>
+        </div>
+        <div class="w3-cell w3-center w3-padding w3-container">
+            <img src="media/EP/AP w EKG.jpg" style="padding: 2vmax">
+        </div>
+    </div>
+    
+</div>
+
+
+<!--end Div pointer-->
+</div>
+
+
+
+
+
+<script src="JF_next_pointer.js"></script>
+<script src="JF_clickToShow.js"></script>
+<script src="JF Nav.js"></script>
+<script>
+
+window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===32) {
+        var p = document.getElementsByClassName("pointer");
+        p[0].style.display = "none";}
+    })
+
+window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===27) {
+        window.unblur()}
+    })
+
+window.ontouchmove = function () {unblur()};
+window.onscroll = function() {scroll()};
+
+</script>	
+
+
+
+
+
+</body>
+</html>
