@@ -27,6 +27,32 @@
 .blueList li, .yellowList li{border-bottom: darkgrey 0.1vmin groove;}
 .blueList li:hover {background-color: #2a389e; color: black; opacity: 0.6}
 
+.circle {
+  border-radius: 50%;
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+.circle:hover {border: white 0.5vw double}
+.circleTxt {
+  float: left;
+  line-height: 1;
+  margin-top: -0.5em;
+  padding-top: 45%;
+  text-align: center;
+  width: 100%;
+}
+.list-opacity li:hover {opacity: 0.5;}
+.list-opacity li {padding: 0.1vmin}
+
+.leftCircle {margin-top: -18vh; font-size: 2.2vmax; text-align: left;padding-left: 1vmax}
+.rightCircle {margin-top: -22vh; font-size: 2.2vmax; text-align: right;padding-right: 1vmax}
+.leftCircle, .rightCircle {display: none}
+@media only screen and (max-width: 600px){
+    .leftCircle, .rightCircle {margin-top:0; font-size: 2.7vmax;font-weight: 600}
+}
 
 </style>
 
@@ -39,9 +65,10 @@
     <a href="ECG.html">ECGs</a>
     <a href="Clinical.html" class="active">Clinical Practice</a>
     <span class="onThisPage">on this page</span>
-    <a href="#basic" style="text-align: right;">Basic</a>
-    <a href="#clinical" style="text-align: right;">Drugs</a>
-    <a href="#QA" style="text-align: right;">Qs&As</a>
+    <a href="#Indications" style="text-align: right;">Indications</a>
+    <a href="#Periop" style="text-align: right;">Perioperative</a>
+    <a href="#Safety" style="text-align: right;">Safety</a>
+    <a href="#Others" style="text-align: right;">Other cardiac tests</a>
     <a href="https://www.facebook.com/HeartRhythmBox/" style="border-top: #332702 0.2vmin solid">
         <i title="@HeartRhythmBox" class="fab fa-facebook" 
             style="color:  #3B5998; border: transparent;"></i>&nbspHeartRhythmBox</a>
@@ -107,8 +134,8 @@ onclick="openNav()">&#9776;
 </div>
 
 
-<!--2Blk Ap w EKG-->
-<div class="block">
+<!--2Blk PPM indication-->
+<div class="block" id="Indications">
     <div class="w3-btn next" onmouseover="next(2)"></div>
     <div class="w3-row">
         <span class="roboto h6" style="color: #808080; padding-left: 1vw">pacemaker</span>
@@ -144,8 +171,61 @@ onclick="openNav()">&#9776;
             </div>
         </div>
     </div>
-    </div>
     
+    
+</div>
+
+<!--3Blk ICD indication-->
+<div class="block w3-border">
+    <div class="w3-btn next" onmouseover="next(2)"></div>
+    <div class="w3-row">
+        <span class="roboto h5" style="color: #808080; padding-left: 1vw">ICD</span>
+        <span class="h3 slabo" style="color: #ea432f">.</span>
+        <span class="h5 bold" style="color: #a9a9a9">indications</span>
+    </div>   
+    
+    <div class="w3-row">
+        <div class="w3-col s0 m3 l3 w3-text-white w3-white">#</div>
+        <div class="w3-col s6 m3 l3" style="padding: 3vmax 0vw 1vh 1vw">
+            <div class="circle" style="background-color: #ea432f">
+                <div class="circleTxt roboto" style="color: white" onclick="showCell('1P')">
+                    <span class="h6 bold">Primary Prevention</span><br>
+                    <span class="h6 yellowTxt">for those with high risks for SCD.</span>
+                </div>
+              </div>
+        </div>
+        <div class="w3-col s6 m3 l3" style="padding: 0vw 1vw 5vmax 0vw">
+            <div class="circle" style="background-color: #2a389e">
+                <div class="circleTxt roboto h6" style="color: white" onclick="showCell('2P')">
+                    <span class="h6 bold">Secondary Prevention</span><br>
+                    <span class="h6 yellowTxt">Post arrest NOT from reversible causes.</span>
+                </div>
+                </div>
+            </div>
+    </div>
+    <div class="w3-row">
+            <div class="w3-col s5 m3 l4 slabo leftCircle" id='1P'>
+                <span class="bold redTxt">High risk for SCD</span>
+                <ul class="w3-ul list-opacity">
+                    <li>LVEF less than 35%, NYHA II+</li>
+                    <li>HCM: LV thickness</li>
+                    <li>ARVD: Poor RV and LV function.</li>
+                    <li>Brugada: syncope with spontaneous type I</li>
+                </ul>
+    
+            </div>
+            <div class="w3-col s1 m6 l4 w3-text-white w3-white">#</div>
+            <div class="w3-col s5 m3 l4 slabo rightCircle" id='2P'>
+                <span class="bold blueTxt">Reversible causes</span>
+                    <ul class="w3-ul list-opacity">
+                        <li>Acute ischemia</li>
+                        <li>AF with WPW</li>
+                        <li>Idiopathic outflow tract VT</li>
+                        <li>Commotio Cordis</li>
+                    </ul>
+            </div>
+        </div>
+
 </div>
 
 
