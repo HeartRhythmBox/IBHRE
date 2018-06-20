@@ -107,7 +107,7 @@ margin-bottom: 14vh;
     z-index: 1; height: fit-content; width: 100%;
     top: 0;
     left: 0;
-    padding: 1vmax;
+    padding: 0.5vmax;
     background-color: #ffc30b;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.2s;
