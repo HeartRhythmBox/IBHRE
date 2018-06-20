@@ -47,9 +47,9 @@
 .list-opacity li:hover {opacity: 0.5;}
 .list-opacity li {padding: 0.1vmin}
 
-.leftCircle {margin-top: -18vh; font-size: 2.2vmax; text-align: left;padding-left: 1vmax}
-.rightCircle {margin-top: -22vh; font-size: 2.2vmax; text-align: right;padding-right: 1vmax}
-.leftCircle, .rightCircle {display: none}
+.leftCircle {margin-top: -22vh; font-size: 2.2vmax; text-align: left;padding-left: 1vmax}
+.rightCircle {margin-top: -17vh; font-size: 2.2vmax; text-align: right;padding-right: 1vmax}
+.leftCircle, .rightCircle {visibility: hidden}
 @media only screen and (max-width: 600px){
     .leftCircle, .rightCircle {margin-top:0; font-size: 2.7vmax;font-weight: 600}
 }
@@ -137,10 +137,10 @@ onclick="openNav()">&#9776;
 <!--2Blk PPM indication-->
 <div class="block" id="Indications">
     <div class="w3-btn next" onmouseover="next(2)"></div>
-    <div class="w3-row">
-        <span class="roboto h6" style="color: #808080; padding-left: 1vw">pacemaker</span>
-        <span class="h4 slabo" style="color: #ea432f">.</span>
-        <span class="h6 bold" style="color: #a9a9a9">indications</span>
+    <div class="w3-row" style="text-align: right; padding-right: 0.5vw">
+        <span class="roboto h5" style="color: #808080; padding-left: 1vw">pacemaker</span>
+        <span class="h3 slabo" style="color: #ea432f">.</span>
+        <span class="h5 bold" style="color: #a9a9a9">indications</span>
     </div>
     <div class="w3-row">
         <div class="w3-col s6 blue w3-mobile" style="text-align: right; height: 85vh; padding-top: 20vh">
@@ -177,26 +177,26 @@ onclick="openNav()">&#9776;
 
 <!--3Blk ICD indication-->
 <div class="block w3-border">
-    <div class="w3-btn next" onmouseover="next(2)"></div>
-    <div class="w3-row">
-        <span class="roboto h5" style="color: #808080; padding-left: 1vw">ICD</span>
+    <div class="w3-btn next" onmouseover="next(3)"></div>
+    <div class="w3-row" style="text-align: right; padding-right: 0.5vw">
+        <span class="roboto h5" style="color: #808080;">ICD</span>
         <span class="h3 slabo" style="color: #ea432f">.</span>
         <span class="h5 bold" style="color: #a9a9a9">indications</span>
     </div>   
     
     <div class="w3-row">
         <div class="w3-col s0 m3 l3 w3-text-white w3-white">#</div>
-        <div class="w3-col s6 m3 l3" style="padding: 3vmax 0vw 1vh 1vw">
+        <div class="w3-col s6 m3 l3" style="padding: 0.5vmax 0vmax 5vmax 1vw">
             <div class="circle" style="background-color: #ea432f">
-                <div class="circleTxt roboto" style="color: white" onclick="showCell('1P')">
+                <div class="circleTxt roboto" style="color: white" onclick="visibleCell('1P')">
                     <span class="h6 bold">Primary Prevention</span><br>
                     <span class="h6 yellowTxt">for those with high risks for SCD.</span>
                 </div>
               </div>
         </div>
-        <div class="w3-col s6 m3 l3" style="padding: 0vw 1vw 5vmax 0vw">
+        <div class="w3-col s6 m3 l3" style="padding: 3vmax 0.5vmax 1vmax 0vw">
             <div class="circle" style="background-color: #2a389e">
-                <div class="circleTxt roboto h6" style="color: white" onclick="showCell('2P')">
+                <div class="circleTxt roboto h6" style="color: white" onclick="visibleCell('2P')">
                     <span class="h6 bold">Secondary Prevention</span><br>
                     <span class="h6 yellowTxt">Post arrest NOT from reversible causes.</span>
                 </div>
@@ -228,6 +228,11 @@ onclick="openNav()">&#9776;
 
 </div>
 
+
+<!--4blk CRT indication-->
+<div class="block">
+        <div class="w3-btn next" onmouseover="next(4)"></div>
+</div>
 
 <!--end Div pointer-->
 </div>

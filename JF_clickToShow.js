@@ -16,6 +16,10 @@ function hideCell(name){
     document.getElementById(name).style.display = "none";
 }
 
+function visibleCell(name){
+    document.getElementById(name).style.visibility = "visible";
+}
+
 function toggle(c,n) {
     var className = document.getElementsByClassName(c);
     var i;
