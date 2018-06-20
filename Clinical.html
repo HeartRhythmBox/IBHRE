@@ -24,6 +24,35 @@
     color: #2a389e; line-height: 120%; font-size: 2.5vmax;letter-spacing: 0.5vw;
     text-align: justify;
 }
+.blueList li, .yellowList li{border-bottom: darkgrey 0.1vmin groove;}
+.blueList li:hover {background-color: #2a389e; color: black; opacity: 0.6}
+
+.circle {
+  border-radius: 50%;
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+.circle:hover {border: white 0.5vw double}
+.circleTxt {
+  float: left;
+  line-height: 1;
+  margin-top: -0.5em;
+  padding-top: 45%;
+  text-align: center;
+  width: 100%;
+}
+.list-opacity li:hover {opacity: 0.5;}
+.list-opacity li {padding: 0.1vmin}
+
+.leftCircle {margin-top: -22vh; font-size: 2.2vmax; text-align: left;padding-left: 1vmax}
+.rightCircle {margin-top: -17vh; font-size: 2.2vmax; text-align: right;padding-right: 1vmax}
+.leftCircle, .rightCircle {visibility: hidden}
+@media only screen and (max-width: 600px){
+    .leftCircle, .rightCircle {margin-top:0; font-size: 2.7vmax;font-weight: 600}
+}
 
 </style>
 
@@ -36,9 +65,10 @@
     <a href="ECG.html">ECGs</a>
     <a href="Clinical.html" class="active">Clinical Practice</a>
     <span class="onThisPage">on this page</span>
-    <a href="#basic" style="text-align: right;">Basic</a>
-    <a href="#clinical" style="text-align: right;">Drugs</a>
-    <a href="#QA" style="text-align: right;">Qs&As</a>
+    <a href="#Indications" style="text-align: right;">Indications</a>
+    <a href="#Periop" style="text-align: right;">Perioperative</a>
+    <a href="#Safety" style="text-align: right;">Safety</a>
+    <a href="#Others" style="text-align: right;">Other cardiac tests</a>
     <a href="https://www.facebook.com/HeartRhythmBox/" style="border-top: #332702 0.2vmin solid">
         <i title="@HeartRhythmBox" class="fab fa-facebook" 
             style="color:  #3B5998; border: transparent;"></i>&nbspHeartRhythmBox</a>
@@ -68,7 +98,7 @@ onclick="openNav()">&#9776;
     
     <div class="w3-row slabo h2 w3-center" style="padding-top: 25vh; line-height: 45%">
         Device-related </div>
-    <div class="w3-row roboto h4 bold w3-center" style="color: #808080; opacity: 0.6; 
+    <div class="w3-row roboto h4 bold w3-center" style="color: #a7a7a7; opacity: 0.6; 
     font-style: italic; letter-spacing: 1vw;">
         GUIDELINES</div>      
        
@@ -104,34 +134,105 @@ onclick="openNav()">&#9776;
 </div>
 
 
-<!--2Blk Ap w EKG-->
-<div class="block">
+<!--2Blk PPM indication-->
+<div class="block" id="Indications">
     <div class="w3-btn next" onmouseover="next(2)"></div>
-    <div class="w3-row h6 roboto bold" style="padding-left: 1vw; color: #808080">
-        PACEMAKER <span style="color: red; font-size: 4vmax">.</span>
-        <span class="h6 roboto" style="color: #808080">
-            indications
-        </span>
+    <div class="w3-row" style="text-align: right; padding-right: 0.5vw">
+        <span class="roboto h5" style="color: #808080; padding-left: 1vw">pacemaker</span>
+        <span class="h3 slabo" style="color: #ea432f">.</span>
+        <span class="h5 bold" style="color: #a9a9a9">indications</span>
     </div>
     <div class="w3-row">
-        <div class="w3-col s6 darkBrown slabo h4" style="padding: 20vh 1vw 1vw 1vw; text-align: right;
-        cursor: pointer; height: 90vh; color: #ffcf3b" onclick="showCell('symptomatic')">
-            <span class="bold">S</span>ymptomatic
-            <ul class="w3-ul h6 roboto greyTxt" id='symptomatic' style="display: none; padding-top: 5vh;
-            text-align: right">
-                <li>sinus node dysfunction</li>
-                <li>AV block</li>
-                <li>Carotid sinus hypersensitivity</li>
-            </ul>
-        </div>        
-        <div class="w3-col s6 slabo h4 w3-white" style="padding: 20vh 1vw 1vw 1vw;height: 90vh;
-        cursor: pointer;" onclick="showCell('asymptomatic')">
-            <span class="bold">A</span>symptomatic
+        <div class="w3-col s6 blue w3-mobile" style="text-align: right; height: 85vh; padding-top: 20vh">
+            <span class="slabo h5" style="padding: 1vmin; cursor: pointer;" onclick="showCell('symp')">
+                <b>S</b>ymptomatic
+            </span>
+            <div id="symp" style="padding: 2vh 1vmin 2vh 3vw; display: none">
+                <ul class="w3-ul slabo h6 w3-hoverable blueList" style="text-align: right; color: lightgray">
+                    <li>High grade AV block</li>
+                    <li>Low grade AV block w/ pacemaker syndrome-like symptoms</li>
+                    <li>Sinus node dysfunction</li>
+                    <li>Cardioinhibitory reflex syncope</li>
+                </ul>
+            </div>
+        </div>
+        <div class="w3-col s6 yellow w3-mobile" style="padding-top: 20vh; height: 85vh;">
+            <span class="slabo h5" style="padding: 1vmin; cursor: pointer;" onclick="showCell('asymp')">
+                <b>A</b>symptomatic
+            </span>
+            <div id="asymp" style="padding: 2vh 3vw 2vh 0.2vmin; display: none">
+                <ul class="w3-ul slabo h6 w3-hoverable yellowList" 
+                style="text-align:left; color: #4d4d4d;">
+                    <li>High grade AV block</li>
+                    <li>Low grade AV block w/ pacemaker syndrome-like symptoms</li>
+                    <li>HV</li>
+                    <li>Cardioinhibitory reflex syncope</li>
+                </ul>
+            </div>
         </div>
     </div>
     
+    
 </div>
 
+<!--3Blk ICD indication-->
+<div class="block w3-border">
+    <div class="w3-btn next" onmouseover="next(3)"></div>
+    <div class="w3-row" style="text-align: right; padding-right: 0.5vw">
+        <span class="roboto h5" style="color: #808080;">ICD</span>
+        <span class="h3 slabo" style="color: #ea432f">.</span>
+        <span class="h5 bold" style="color: #a9a9a9">indications</span>
+    </div>   
+    
+    <div class="w3-row">
+        <div class="w3-col s0 m3 l3 w3-text-white w3-white">#</div>
+        <div class="w3-col s6 m3 l3" style="padding: 0.5vmax 0vmax 5vmax 1vw">
+            <div class="circle" style="background-color: #ea432f">
+                <div class="circleTxt roboto" style="color: white" onclick="visibleCell('1P')">
+                    <span class="h6 bold">Primary Prevention</span><br>
+                    <span class="h6 yellowTxt">for those with high risks for SCD.</span>
+                </div>
+              </div>
+        </div>
+        <div class="w3-col s6 m3 l3" style="padding: 3vmax 0.5vmax 1vmax 0vw">
+            <div class="circle" style="background-color: #2a389e">
+                <div class="circleTxt roboto h6" style="color: white" onclick="visibleCell('2P')">
+                    <span class="h6 bold">Secondary Prevention</span><br>
+                    <span class="h6 yellowTxt">Post arrest NOT from reversible causes.</span>
+                </div>
+                </div>
+            </div>
+    </div>
+    <div class="w3-row">
+            <div class="w3-col s5 m3 l4 slabo leftCircle" id='1P'>
+                <span class="bold redTxt">High risk for SCD</span>
+                <ul class="w3-ul list-opacity">
+                    <li>LVEF less than 35%, NYHA II+</li>
+                    <li>HCM: LV thickness</li>
+                    <li>ARVD: Poor RV and LV function.</li>
+                    <li>Brugada: syncope with spontaneous type I</li>
+                </ul>
+    
+            </div>
+            <div class="w3-col s1 m6 l4 w3-text-white w3-white">#</div>
+            <div class="w3-col s5 m3 l4 slabo rightCircle" id='2P'>
+                <span class="bold blueTxt">Reversible causes</span>
+                    <ul class="w3-ul list-opacity">
+                        <li>Acute ischemia</li>
+                        <li>AF with WPW</li>
+                        <li>Idiopathic outflow tract VT</li>
+                        <li>Commotio Cordis</li>
+                    </ul>
+            </div>
+        </div>
+
+</div>
+
+
+<!--4blk CRT indication-->
+<div class="block">
+    <div class="w3-btn next" onmouseover="next(4)"></div>
+</div>
 
 <!--end Div pointer-->
 </div>

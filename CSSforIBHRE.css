@@ -5,6 +5,7 @@
 .yellowGd {background: linear-gradient(to bottom, #ffc30b 0%, #ffcf3b 100%);}
 .darkBrown {background-color:#332702;color: white;}
 .red {background-color: #ea432f; color: white}
+.redTxt {color: #ea432f}
 .grey {background-color:#9e9e9e; color: white}
 .darkGTxt {color: #191301;}
 .greyTxt {color: #808080}
@@ -106,7 +107,7 @@ margin-bottom: 14vh;
     z-index: 1; height: fit-content; width: 100%;
     top: 0;
     left: 0;
-    padding: 1vmax;
+    padding: 0.5vmax;
     background-color: #ffc30b;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.2s;
@@ -161,4 +162,10 @@ margin-bottom: 14vh;
     .next {left: 93%;}
     }
 img {width: 100%}
+
+@media only screen and (max-width: 600px){
+    .noMobile {display: none}
+}
+   
+
 
