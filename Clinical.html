@@ -24,6 +24,9 @@
     color: #2a389e; line-height: 120%; font-size: 2.5vmax;letter-spacing: 0.5vw;
     text-align: justify;
 }
+.blueList li, .yellowList li{border-bottom: darkgrey 0.1vmin groove;}
+.blueList li:hover {background-color: #2a389e; color: black; opacity: 0.6}
+
 
 </style>
 
@@ -107,19 +110,40 @@ onclick="openNav()">&#9776;
 <!--2Blk Ap w EKG-->
 <div class="block">
     <div class="w3-btn next" onmouseover="next(2)"></div>
-    <div class="w3-cell-row w3-padding w3-mobile red">
-        <div class="w3-cell w3-center w3-cell-middle w3-text-white w3-padding w3-mobile w3-container slabo h4">Phase 0 = QRS, 
-            <br>the rest is for ST-T.
-            <div class="ref w3-row" style="color: lightgray">
-                <a href="https://drsvenkatesan.com/2009/08/26/
-                why-ecg-is-greatly-influensed-by-serum-potasium-levels-and-least-affected-by-serum-sodium-levels/
-                action-potential-ecg-phase-0-sodium-potasium-depolaristion-repolarisation/">
-                    Dr.S.Venkatesan, MD; Expressions in cardiology</a>
+    <div class="w3-row">
+        <span class="roboto h6" style="color: #808080; padding-left: 1vw">pacemaker</span>
+        <span class="h4 slabo" style="color: #ea432f">.</span>
+        <span class="h6 bold" style="color: #a9a9a9">indications</span>
+    </div>
+    <div class="w3-row">
+        <div class="w3-col s6 blue w3-mobile" style="text-align: right; height: 85vh; padding-top: 20vh">
+            <span class="slabo h5" style="padding: 1vmin; cursor: pointer;" onclick="showCell('symp')">
+                <b>S</b>ymptomatic
+            </span>
+            <div id="symp" style="padding: 2vh 1vmin 2vh 3vw; display: none">
+                <ul class="w3-ul slabo h6 w3-hoverable blueList" style="text-align: right; color: lightgray">
+                    <li>High grade AV block</li>
+                    <li>Low grade AV block w/ pacemaker syndrome-like symptoms</li>
+                    <li>Sinus node dysfunction</li>
+                    <li>Cardioinhibitory reflex syncope</li>
+                </ul>
             </div>
         </div>
-        <div class="w3-cell w3-center w3-padding w3-container">
-            <img src="media/EP/AP w EKG.jpg" style="padding: 2vmax">
+        <div class="w3-col s6 yellow w3-mobile" style="padding-top: 20vh; height: 85vh;">
+            <span class="slabo h5" style="padding: 1vmin; cursor: pointer;" onclick="showCell('asymp')">
+                <b>A</b>symptomatic
+            </span>
+            <div id="asymp" style="padding: 2vh 3vw 2vh 0.2vmin; display: none">
+                <ul class="w3-ul slabo h6 w3-hoverable yellowList" 
+                style="text-align:left; color: #4d4d4d;">
+                    <li>High grade AV block</li>
+                    <li>Low grade AV block w/ pacemaker syndrome-like symptoms</li>
+                    <li>HV</li>
+                    <li>Cardioinhibitory reflex syncope</li>
+                </ul>
+            </div>
         </div>
+    </div>
     </div>
     
 </div>
