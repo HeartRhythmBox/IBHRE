@@ -26,6 +26,11 @@
 }
 .blueList li, .yellowList li{border-bottom: darkgrey 0.1vmin groove;}
 .blueList li:hover {background-color: #2a389e; color: black; opacity: 0.6}
+.blueList {text-align: right; visibility:hidden;}
+.yellowList {text-align: left; visibility:hidden;}
+@media only screen and (max-width: 600px){
+    .blueList, .yellowList, .blueList li, .yellowList li {text-align: center}
+}
 
 .circle {
   border-radius: 50%;
@@ -102,7 +107,7 @@ onclick="openNav()">&#9776;
     font-style: italic; letter-spacing: 1vw;">
         GUIDELINES</div>      
        
-    <div class="w3-row w3-mobile">        
+    <div class="w3-row w3-mobile" style="padding-top: 2vh">        
         <div class="w3-col s4 colPad roboto w3-mobile">
             <a href="https://www.sciencedirect.com/science/article/pii/S0735109712054952?via%3Dihub">
             2012 ACCF/AHA/HRS Focused Update Incorporated
@@ -144,11 +149,11 @@ onclick="openNav()">&#9776;
     </div>
     <div class="w3-row">
         <div class="w3-col s6 blue w3-mobile" style="text-align: right; padding-top: 20vh">
-            <span class="slabo h5" style="padding: 1vmin; cursor: pointer;" onclick="visibleCell('symp')">
-                <b>S</b>ymptomatic
+            <span class="slabo h5 mobileSize" style="padding: 1vmax; cursor: pointer;" onclick="visibleCell('symp')">
+                <b>Symptomatic</b>
             </span>
-            <div id="symp" style="padding: 2vh 1vmin 2vh 3vw; display: none">
-                <ul class="w3-ul slabo h6 w3-hoverable blueList" style="text-align: right; color: lightgray">
+            <div style="padding: 2vh 1vmin 2vh 3vw;">
+                <ul id="symp" class="w3-ul slabo h6 w3-hoverable blueList mobileSize" style="color: lightgray">
                     <li>High grade AV block</li>
                     <li>Low grade AV block w/ pacemaker syndrome-like symptoms</li>
                     <li>Sinus node dysfunction</li>
@@ -157,12 +162,12 @@ onclick="openNav()">&#9776;
             </div>
         </div>
         <div class="w3-col s6 yellow w3-mobile" style="padding-top: 20vh; ">
-            <span class="slabo h5" style="padding: 1vmin; cursor: pointer;" onclick="visibleCell('asymp')">
-                <b>A</b>symptomatic
+            <span class="slabo h5 mobileSize" style="padding: 1vmax; cursor: pointer;" onclick="visibleCell('asymp')">
+                <b>Asymptomatic</b>
             </span>
-            <div id="asymp" style="padding: 2vh 3vw 2vh 0.2vmin; display: none">
-                <ul class="w3-ul slabo h6 w3-hoverable yellowList" 
-                style="text-align:left; color: #4d4d4d;">
+            <div style="padding: 2vh 3vw 2vh 0.2vmin;">
+                <ul id="asymp"  class="w3-ul slabo h6 w3-hoverable yellowList mobileSize" 
+                style="color: #4d4d4d;">
                     <li>High grade AV block</li>
                     <li>Low grade AV block w/ pacemaker syndrome-like symptoms</li>
                     <li>HV</li>
@@ -230,8 +235,24 @@ onclick="openNav()">&#9776;
 
 
 <!--4blk CRT indication-->
-<div class="block">
+<div class="block" style="border: #332702 0.5vmax solid">
     <div class="w3-btn next" onmouseover="next(4)"></div>
+    <div class="w3-row" style="text-align: left;">
+        <span class="roboto h5" style="color: #808080;">CRT</span>
+        <span class="h3 slabo" style="color: #ea432f">.</span>
+        <span class="h5 bold" style="color: #a9a9a9">indications</span>
+    </div> 
+    <div class="w3-cell-row">
+        <div class="w3-cell w3-container w3-center" onclick="showCell('crt')" style="cursor: pointer;">
+            <img src="media/Clinical/CRT.jpg" style="border-radius: 50%; width: 30vw">
+            <div class="w3-center roboto h5 bold w3-padding" style="color: #808080">
+            #QRS_duration&nbsp;  #typeofBBB&nbsp;  #NYHA&nbsp;  #rhythm</div>
+        </div>
+        <div class="w3-cell w3-container" id="crt" style="display: none">
+            <img src="">
+        </div>
+    </div>
+    
 </div>
 
 <!--end Div pointer-->
