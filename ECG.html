@@ -27,8 +27,8 @@
   height: 90vh;width: 100%;
 }
 
-@media only screen and (max-width: 960px){
-    .imgBox {max-height: fit-content}
+@media only screen and (max-width: 600px){
+    .imgBox {max-height: auto; padding-top: 1vmax}
     .container {height: auto;border: #a9a9a9 solid 0.4vmax;}
 }
 
@@ -41,7 +41,7 @@
 .moreInfo {
     background-color: #332702;color: white;
     font-size: 2vmax; margin: 1vmax; padding: 0.5vw;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); width: auto;
 }
 
 .modalClose {
@@ -77,7 +77,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .prevS, .nextS {top:20%}
+    .prevS, .nextS {top:30%}
 }
 
 /* Position the "next button" to the right */
