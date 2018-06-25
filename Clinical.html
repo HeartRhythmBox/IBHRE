@@ -7,7 +7,7 @@
 
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px|Bangers" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="CSSforIBHRE.css">
 <style>
@@ -59,6 +59,10 @@
     .leftCircle, .rightCircle {margin-top:0; font-size: 2.7vmax;font-weight: 600}
 }
 
+.cartoon {font-family: 'Bangers', cursive;}
+.cartoonTable th {font-weight: 400}
+.cartoonTable th, .cartoonTable td {padding: 0.5vmax 1.5vmax 0.5vmax 1.5vmax}
+
 </style>
 
 <body>
@@ -72,8 +76,8 @@
     <span class="onThisPage">on this page</span>
     <a href="#Indications" style="text-align: right;">Indications</a>
     <a href="#Periop" style="text-align: right;">Perioperative</a>
-    <a href="#Safety" style="text-align: right;">Safety</a>
     <a href="#Others" style="text-align: right;">Other cardiac tests</a>
+    <a href="#QA" style="text-align: right;">Qs&As</a>
     <a href="https://www.facebook.com/HeartRhythmBox/" style="border-top: #332702 0.2vmin solid">
         <i title="@HeartRhythmBox" class="fab fa-facebook" 
             style="color:  #3B5998; border: transparent;"></i>&nbspHeartRhythmBox</a>
@@ -386,7 +390,7 @@ onclick="openNav()">&#9776;
 <!--9blk Xray-->
 <div class="block darkBrown"> 
     <div class="w3-btn next" onmouseover="next(9)"></div>
-    <div class="w3-row" style="padding: 5vmax">
+    <div class="w3-row" style="padding: 4vmax">
         <div class="w3-row greyTxt w3-wide roboto h5 bold w3-center">radiation safety</div>
         <div class="w3-row slabo h4 w3-center yellowTxt" style="cursor: pointer;" 
         onclick="visibleCell('alara')">What are the 3 principles of "ALARA"?<br>
@@ -412,12 +416,106 @@ onclick="openNav()">&#9776;
     </div>
 </div>
 
-<!--10blk Xray-->
+<!--10blk sterile-->
 <div class="block"> 
     <div class="w3-btn next" onmouseover="next(10)"></div>
-    <div class="w3-row w3-center roboto h5 bold">
+    <div class="greenBorder w3-row w3-center roboto h5 bold" style="padding: 0.5vmax">
         <img src="media/Clinical/stay sterile.jpg" style="width: 15%">
-        Principles of Aseptic Technique in an Operating Room
+        <span style="padding-left: 1vw">Principles of Aseptic Technique in an Operating Room</span>
+    </div>
+    <div class="w3-row greenBorder" style="padding-top: 3vh">
+        <div class="w3-col s12 m12 l5 w3-center w3-mobile">
+            <img src="media/Clinical/sterile zone.png" style="padding: 3vh 1vmax">
+        </div>
+        <div class="w3-col s12 m12 l7 w3-mobile">
+            <ul class="w3-ul w3-hoverable h6 roboto">
+                <li>A sterile barrier that has been compromised by punctures, tears or moisture 
+                    has to be considered contaminated. </li>
+                <li>Once a package is opened, a 2.5 cm (1 inch) border around the edge is considered 
+                    unsterile.</li>
+                <li>Tables draped as part of a sterile field are considered sterile only at the table level.
+                    </li>
+                <li>Anything out of your range of vision or below waist level is considered contaminated and unsterile.
+                    </li>
+                <li>A sterile object or field can become contaminated by lingering exposure to air.
+                    </li>
+                <li>If there are any questions or doubts about an object's sterility, the object should be considered unsterile.
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--11blk sterile-->
+<div class="block"> 
+    <div class="w3-btn next" onmouseover="next(11)"></div>
+    <div class="w3-row w3-center cartoon h3" style="border: black solid 0.2vw; padding: 0.5vmax">
+        Acute Complications
+    </div>
+    <div class="w3-row">
+        <div class="w3-cell w3-container w3-mobile" style="border: black solid; border-width: 0.1vw 0.1vw 0.2vw 0.2vw">
+        <img src="media/Clinical/Cardiac-Tamponade.jpg">
+    </div>
+    <div class="w3-cell w3-container w3-mobile" style="border: black solid; border-width: 0.1vw 0.2vw 0.2vw 0.1vw">
+        <img src="media/Clinical/Tension-Pneumothorax.jpg">
+    </div>
+    </div>
+    <table class="w3-table-all h6 w3-hoverable cartoonTable" style="padding-top: 5vh">
+        <tr class="cartoon h5" style="background-color: #ea432f; font-weight: 400;
+        color: white">
+            <th>Complications</th><th>What is it?</th><th>What to do?</th>
+        </tr>
+        <tr class="roboto">
+            <td>Cardiac Tamponade</td>
+            <td>Fluid/Blood in the pericardiac space compressing the heart causing low cardiac output. 
+                During device implantation, tamponade is mainly caused by lead perforation.</td>
+            <td>Echocardiogram to confirm. Pericardiocentesis to release the fluid.</td>
+        </tr>
+        <tr class="roboto">
+            <td>Pneumothorax</td>
+            <td>Air leaks into the plueral space compressing the lung causing desaturation.</td>
+            <td>CXR to confirm. Thoracocentesis to release the air.</td>
+            </tr>
+        <tr class="roboto">
+            <td>Oversedation</td>
+            <td>Desaturation from hypoventilation or hypotension from vasodilatation.</td>
+            <td>Maintain airways, IV fluid, +/-antidote.</td>
+            </tr>
+    </table>
+</div>
+
+<!--12blk infection-->
+<div class="block  w3-light-grey"> 
+    <div class="w3-btn next" onmouseover="next(12)"></div>
+    <div class="w3-cell-row" style="border-bottom: darkgray solid 0.5vmax; padding: 2vmax">
+        <div class="w3-container w3-cell w3-center w3-cell-middle">
+            <img src="media/Clinical/Staph A.jpg" style="mix-blend-mode:difference">
+        </div>
+        <div class="w3-container w3-wide w3-cell w3-center w3-cell-middle roboto h3 darkGTxt bold">
+            Device infection
+        </div>
+    </div>
+    <div class="w3-cell-row" style="padding: 3vmax 0.5vmax 3vmax 0.5vmax">
+        <div class="w3-col s6 w3-mobile w3-padding">
+            <img src="media/Clinical/Risk CIED infection.png">
+        </div>
+        <div class="w3-col s6 w3-mobile w3-padding">
+            <img src="media/Clinical/CIED infection algo.png">
+        </div>
+    </div>
+    <div class="w3-row h6 roboto" style="padding: 1vmax">
+        <ul class="w3-ul w3-hoverable w3-topbar" style="padding: 0.5vmax">
+            <li>Most common pathogens: Staphylococcus aureus and epidermidis (coagulase-negative)</li>
+            <li>Complete device and lead removal is recommended for all patients with
+                definite CIED system infection or CIED pocket infection. </li>
+            <li>Percutaneous aspiration of the generator pocket should not be performed
+                as part of the diagnostic evaluation of CIED infection</li>
+        </ul>
+        <div class="ref w3-center">
+            <a href="https://www.hrsonline.org/Policy-Payment/Clinical-Guidelines-Documents/2017-HRS-Expert-Consensus-Statement-on-Cardiovascular-Implantable-Electronic-Device-Lead-Management-and-Extraction">
+            2017 HRS Expert Consensus Statement on Cardiovascular Implantable Electronic Device Lead Management and Extraction
+            </a>
+        </div>
     </div>
 </div>
 
