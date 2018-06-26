@@ -62,6 +62,7 @@
 .cartoon {font-family: 'Bangers', cursive;}
 .cartoonTable th {font-weight: 400}
 .cartoonTable th, .cartoonTable td {padding: 0.5vmax 1.5vmax 0.5vmax 1.5vmax}
+.QA {display: none};
 
 </style>
 
@@ -622,6 +623,30 @@ onclick="openNav()">&#9776;
     </div>
 </div>
 
+<!--16blk QA-->
+<div id="QA" class="block"> 
+    <div class="w3-btn next" onmouseover="next(15)"></div>
+    <div class="w3-row slabo h3">Questions and Answers</div>
+    <div class="w3-container" style="border: #332702 solid 0.4vmax">
+        <div id='1' class="w3-row w3-center roboto bold h6 QA" style="display: block">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #1 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+            
+        </div>
+        <div id='2' class="w3-row w3-center roboto bold h6 QA">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #2 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+            
+        </div>
+        <div id='3' class="w3-row w3-center roboto bold h6 QA">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #3 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+            
+        </div>
+    </div>
+    
+</div>
+
 
 <!--end Div pointer-->
 </div>
@@ -650,6 +675,21 @@ window.addEventListener("keydown", function(event) {
 
 window.ontouchmove = function () {unblur()};
 window.onscroll = function() {scroll()};
+
+
+function plusQ (n, name) {
+    var id = name.parentElement.id;
+    var No = Number(id);
+    var QA = document.getElementsByClassName('QA');
+    var q = QA.length;
+    var qNo = Number(id) + n; 
+    if (qNo==0) {qNo=q}; if (qNo>q) {qNo=1};
+    var i;
+    for (i=0;i<q;i++){
+        QA[i].style.display = "none";
+    }
+    QA[qNo-1].style.display = "block";
+}
 
 </script>	
 
