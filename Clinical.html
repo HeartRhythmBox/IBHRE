@@ -62,7 +62,11 @@
 .cartoon {font-family: 'Bangers', cursive;}
 .cartoonTable th {font-weight: 400}
 .cartoonTable th, .cartoonTable td {padding: 0.5vmax 1.5vmax 0.5vmax 1.5vmax}
-.QA {display: none};
+.QA {display: none}
+ol.choice {list-style: lower-alpha inside}
+.ansBtn {background-color: #ff9a00; color: white;margin: 2vmax;padding: 0.5vmin}
+.answer {display: none; padding: 2vmax; border-top: #a7a7a7 dotted 0.3vmax}
+
 
 </style>
 
@@ -625,25 +629,340 @@ onclick="openNav()">&#9776;
 
 <!--16blk QA-->
 <div id="QA" class="block"> 
-    <div class="w3-btn next" onmouseover="next(15)"></div>
-    <div class="w3-row slabo h3">Questions and Answers</div>
-    <div class="w3-container" style="border: #332702 solid 0.4vmax">
-        <div id='1' class="w3-row w3-center roboto bold h6 QA" style="display: block">
+<div class="w3-btn next" onmouseover="next(15)"></div>
+<div class="w3-row slabo h3 w3-padding">Questions and Answers</div>
+<div class="w3-container" style="border: #332702 solid 0.4vmax">
+        
+    <!--1-->
+    <div class="w3-container QA" style="display: block">
+        <div id='1' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
             <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
             #1 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
-            
         </div>
-        <div id='2' class="w3-row w3-center roboto bold h6 QA">
+        <!--Q-->
+        <div class="w3-container roboto h6" style="text-align: left">
+            A 35-year-old man with tetralogy of Fallot, which was surgically repaired in childhood, 
+            presents for evaluation of palpitations. He is healthy and denies exercise intolerance. 
+            He is not on any medications. Which of the following findings is associated with 
+            an increased risk of ventricular arrhythmias in this patient?
+            <ol class="choice">
+                <li>Body mass index &#10094;19 kg/m<sup>2</sup></li>
+                <li>Arterial Oxygen saturation&#10094;90% </li>
+                <li>Severe tricuspid regurgitation on echocardiography.</li>
+                <li>Right aortic arch noted on chest radiography.</li>
+                <li>QRS duration of 210 ms on resting electrocardiogram. </li>
+            </ol>
+            <div class="w3-btn w3-row w3-round ansBtn" 
+            onclick="show(this)" id='q1'>show answer</div>
+
+        <!--A-->
+            <div class="w3-row answer roboto h6" id="q1Txt">
+                Answer: e. QRS>180ms increases risks of VT/VF in tetralogy of Fallot (TOF)
+                <div class="w3-row blueBorder" style="padding-top: 2vmax">
+                    <div class="w3-col s5 w3-padding w3-mobile">
+                    <img src="media/QA/TOF.jpg"></div>
+                    <div class="w3-col s7 w3-padding w3-mobile">
+                    <ul class="w3-ul roboto h6 w3-hoverable">
+                        <li>Most common congenital cyanotic heart disease.</li>
+                        <li>ICD for secondary prevetion in the absence of reversible causes
+                            and meaningful survival >1year.</li>
+                        <li>Syncope + Moderate LV dysfunction: EP study or ICD.</li>
+                        <li>EP study is useful in <b>high risk</b> cases.<br>
+                        <span class="greyTxt h7">
+                        HIGH RISKS for SCA in TOF:  prior palliative
+                        systemic to pulmonary shunts, unexplained syncope, frequent PVCs, atrial tachycardia, QRS duration ≥180 ms,
+                        decreased LVEF or diastolic dysfunction, dilated right ventricle, severe pulmonary regurgitation or stenosis, or
+                        elevated levels of BNP.        
+                        </span>  </li>
+                    </ul>        
+                    </div>
+                    <div class="w3-container w3-center" style="padding: 3vmax">
+                            <img src="media/QA/q1_ACHD.png" style="width: 85%; padding-top: 3vmax">
+                            <div class="ref w3-center roboto">
+                                <a href="http://circ.ahajournals.org/content/early/2017/10/30/CIR.0000000000000549">
+                                2017 SCA Guidelines</a>
+                            </div>
+                        </div>
+                </div>
+                
+            </div>
+        </div>    
+    
+        <div id='1' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
             <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
-            #2 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
-            
-        </div>
-        <div id='3' class="w3-row w3-center roboto bold h6 QA">
-            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
-            #3 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
-            
+            #1 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
         </div>
     </div>
+  
+
+    <!--2-->
+    <div class="w3-container QA">
+        <div id='2' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #2 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        <!--Q-->
+        <div class="w3-container roboto h6" style="text-align: left">
+            <img src="media/QA/Q2 CRT on treadmill.png">
+            You are consulted to see a non-CRT responder. An exercise treadmill test
+            was performed. The tracings are as shown. What would be the most likely 
+            cause of not responding to the CRT?
+            <ol class="choice">
+                <li>Loss of LV capture.</li>
+                <li>Loss of RV capture.</li>
+                <li>Intrinsic conduction.</li>
+                <li>Negative AV hysteresis.</li>                                       
+            </ol>
+            <div class="w3-btn w3-row w3-round ansBtn" 
+            onclick="show(this)" id='q2'>show answer</div>
+
+        <!--A-->
+            <div class="w3-row answer roboto h6" id="q2Txt">
+                Answer: c. During the exercise, as shown in the right0sided tracing,
+                fusion between biventricular pacing and native QRS occurs. 
+                The positivity of QRS in V1 is clearly lost when compared with the
+                resting ECG on the left sided.
+            
+                
+            <div class="w3-row w3-padding w3-mobile blueBorder" style="margin-top: 3vmax">
+                <div class="w3-container w3-cell w3-center w3-mobile w3-padding">
+                    <img src="media/EKG/device/BiV pacing vector.png">
+                    <div class="h6">
+                        Frontal QRS axis during different pacing configurations.
+                        <span class="ref">
+                            <a href="https://academic.oup.com/europace/article/15/3/376/432909"> 
+                            Europace 2012 </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="w3-container w3-cell w3-center w3-padding w3-mobile">
+                        <b class="w3-bottombar">CLUE to LV/RV/BiV pacing</b>
+                    <ul class="w3-ul w3-bordered w3-hoverable">
+                        <li>Use leads V1, I, aVL, and III.</li>
+                        <li>Positive in V1, Q in I and aVL suggest left to right forces = LV pacing.</li>
+                        <li>Positive in III suggests force from left lateral area = LV pacing.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            </div>
+        </div>
+
+        <div id='2' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #2 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        </div>
+
+    <!--3-->
+    <div class="w3-container QA">
+        <div id='3' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #3 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        <!--Q-->
+        <div class="w3-container roboto h6" style="text-align: left">
+            A 76 year-old woman has shortness of breath 6 hours after 
+            undergoing a pacemaker. The pacemaker was done via cephalic route. 
+            On physical examination, her chest is clear, her BP is 80/50 mmHg, 
+            and the rhythm is AV paced at 70 bpm. 
+            Which of the following is the most appropriate management?
+            <ol class="choice">
+                <li>Administer of furosemide.</li>
+                <li>Administer of salbutamol.</li>
+                <li>Echocardiogram.</li>
+                <li>Chest X-ray.</li>     
+                <li>Intravenous fluid.</li>                                  
+            </ol>
+            <div class="w3-btn w3-row w3-round ansBtn" 
+            onclick="show(this)" id='q3'>show answer</div>
+
+        <!--A-->
+            <div class="w3-row answer roboto h6" id="q3Txt">
+                Answer: c. <br>
+                Think of cardiac tamponade for hypotension and shortness of breath shortly after a device implantation.
+                Pneumothorax is an unlikely complication for cephalic access. Heart failure, asthma 
+                exacerbation, or dehydration are possible but does not require an emergent diagnosis and treatment
+                the same way cardiac tamponade does. 
+            
+            </div>
+        </div>
+
+        <div id='3' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #3 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        </div>  
+        
+    <!--4-->
+    <div class="w3-container QA">
+        <div id='4' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #4 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        <!--Q-->
+        <div class="w3-container roboto h6" style="text-align: left">
+            A patient undergoes a cardioversion six months after undergoing implantation 
+            of a dual chamber pacemaker (DDD 60/140). After the cardioversion, the ECG monitor
+            shows ventricular pacing at 65 bpm with no evidence of either atrial pacing or tracking.
+            Which one of the following is the most appropriate course of action?
+            <ol class="choice">
+                <li>Obtaine a chest X-ray.</li>
+                <li>Replace the generator.</li>
+                <li>Reprogram the pacemaker.</li>
+                <li>Place a temporary pacemaker.</li>     
+                <li>Place a magnet over the generator.</li>                                  
+            </ol>
+            <div class="w3-btn w3-row w3-round ansBtn" 
+            onclick="show(this)" id='q4'>show answer</div>
+
+        <!--A-->
+            <div class="w3-row answer roboto h6" id="q4Txt">
+                Answer: c. <br>
+                EMI from cardioversion causes power-on-reset.
+            </div>
+        </div>
+
+        <div id='4' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #4 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        </div> 
+        
+    <!--5-->
+    <div class="w3-container QA">
+    <div id='5' class="w3-center w3-row roboto bold h6 greyTxt" 
+    style="padding: 1vmax;">
+        <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+        #5 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+    </div>
+    <!--Q-->
+    <div class="w3-container roboto h6" style="text-align: left">
+            What are the clinical advantages of AV nodal
+            ablation and SSIR pacing in the setting of Atrial
+            Fibrillation with a Rapid Ventricular Response?
+        <ol class="choice">
+            <li>Slow the atrial rate.</li>
+            <li>Allow for AV synchrony.</li>
+            <li>Provide controlled and regular ventricular rate.</li>
+            <li>Prevent endless-loop tachycardia.</li>                                  
+        </ol>
+        <div class="w3-btn w3-row w3-round ansBtn" 
+        onclick="show(this)" id='q5'>show answer</div>
+
+    <!--A-->
+        <div class="w3-row answer roboto h6" id="q5Txt">
+            Answer: c. <br>
+            AV nodal ablation has nothing to do with the atrial rate. 
+            AV synchrony cannot be acheived with atrial fibrillation.
+            End-less loop tachycardia is not possible with AF.
+        </div>
+    </div>
+
+    <div id='5' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #5 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+    </div>
+    </div> 
+
+    <!--6-->
+    <div class="w3-container QA">
+        <div id='6' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #6 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        <!--Q-->
+        <div class="w3-container roboto h6" style="text-align: left">
+                What medication should not be discontinued post SVT ablation?
+            <ol class="choice">
+                <li>Propranolol</li>
+                <li>Verapamil</li>
+                <li>Digoxin</li>
+                <li>Atenolol</li>
+                <li>Warfarin</li>                                  
+            </ol>
+            <div class="w3-btn w3-row w3-round ansBtn" 
+            onclick="show(this)" id='q6'>show answer</div>
+    
+        <!--A-->
+            <div class="w3-row answer roboto h6" id="q6Txt">
+                Answer: e. <br>
+                Except warfarin, the rest of the medications are rate-slowing drugs
+                which could be discontinued after a successful ablatino.
+                Warfarin is a blood thinner which is generally indicated for 
+                prevention of strok and thromboembolism. In this case, the indication
+                is unknown; yet, discontinuation is not advised. 
+            </div>
+        </div>
+        
+        <div id='6' class="w3-center w3-row roboto bold h6 greyTxt" 
+            style="padding: 1vmax;">
+                <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+                #6 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        </div>
+        
+    <!--7-->
+    <div class="w3-container QA">
+        <div id='7' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #7 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        <!--Q-->
+        <div class="w3-container roboto h6" style="text-align: left">
+            <div class="w3-col s6 w3-padding w3-mobile"><img src="media/QA/Q7 tilt question.jpg"></div>
+            <div class="w3-col s6 w3-padding w3-mobile">This tracing was recorded during a tilt table test of a 21 year-old man 
+            who has had frequent episodes of presyncope and syncope over the past 3 months.
+            Which of the following is the most appropriate treatment for this patient?</div>
+            <ol class="choice">
+                <li>Beta blocker</li>
+                <li>Florinef</li>
+                <li>ICD</li>
+                <li>Pacemaker</li>
+                <li>Education, diet, exercise</li>                                  
+            </ol>
+            <div class="w3-btn w3-row w3-round ansBtn" 
+            onclick="show(this)" id='q7'>show answer</div>
+    
+        <!--A-->
+            <div class="w3-row answer roboto h6" id="q7Txt">
+                Answer: e. <br>
+                Tracing from tilt table test shows neurocardiogenic or vasovagal syncope. BP and HR 
+                slowly drop. There is a brief period of asystole which quickly recovers.
+                The initial treatment of neurocardiogenic syncope is education and lifestyle
+                modification to avoid possible triggers such as prolong standing or warm environments. 
+            
+            <div class="w3-cell-row w3-padding w3-mobile blueBorder" style="margin-top: 3vmax">
+                <div class="w3-col s6 w3-padding">
+                    <img src="media/QA/Q7 tilt mech.png">
+                </div>                
+                <div class="w3-col s6 w3-padding">
+                    <img src="media/QA/Q7 tilt VS.jpg">
+                    <div class="ref roboto w3-center">ref: ACCSAP9</div>
+                </div>
+            </div></div>
+        </div>
+        
+        <div id='7' class="w3-center w3-row roboto bold h6 greyTxt" 
+            style="padding: 1vmax;">
+                <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+                #7 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        </div>    
+    
+
+</div>
     
 </div>
 
@@ -681,12 +1000,14 @@ function plusQ (n, name) {
     var id = name.parentElement.id;
     var No = Number(id);
     var QA = document.getElementsByClassName('QA');
+    var ans = document.getElementsByClassName('answer');
     var q = QA.length;
     var qNo = Number(id) + n; 
     if (qNo==0) {qNo=q}; if (qNo>q) {qNo=1};
     var i;
     for (i=0;i<q;i++){
         QA[i].style.display = "none";
+        ans[i].style.display = "none";
     }
     QA[qNo-1].style.display = "block";
 }
