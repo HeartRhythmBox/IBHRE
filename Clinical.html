@@ -66,7 +66,17 @@
 ol.choice {list-style: lower-alpha inside}
 .ansBtn {background-color: #ff9a00; color: white;margin: 2vmax;padding: 0.5vmin}
 .answer {display: none; padding: 2vmax; border-top: #a7a7a7 dotted 0.3vmax}
+.progress-container {
+  width: 100%;
+  height: 1vh;
+  background: #f1f2f1;margin-bottom: 0.5vh;margin-left: 0; margin-right: 0;
+}
 
+.progress-bar {
+  height: 1vh;
+  background-color:#ff9a00; 
+  width: 0%;
+}
 
 </style>
 
@@ -631,8 +641,9 @@ onclick="openNav()">&#9776;
 <div id="QA" class="block"> 
 <div class="w3-btn next" onmouseover="next(15)"></div>
 <div class="w3-row slabo h3 w3-padding">Questions and Answers</div>
+
 <div class="w3-container" style="border: #332702 solid 0.4vmax">
-        
+
     <!--1-->
     <div class="w3-container QA" style="display: block">
         <div id='1' class="w3-center w3-row roboto bold h6 greyTxt" 
@@ -1090,7 +1101,7 @@ onclick="openNav()">&#9776;
         </div>
         </div>
 
-    <!--10-->
+    <!--10 LQT-->
     <div class="w3-container QA">
         <div id='10' class="w3-center w3-row roboto bold h6 greyTxt" 
         style="padding: 1vmax;">
@@ -1142,7 +1153,7 @@ onclick="openNav()">&#9776;
         </div>
         </div>
 
-    <!--11-->
+    <!--11 pLSVC-->
     <div class="w3-container QA">
     <div id='11' class="w3-center w3-row roboto bold h6 greyTxt" 
     style="padding: 1vmax;">
@@ -1382,13 +1393,203 @@ onclick="openNav()">&#9776;
     
         </div>
     
-        <div id='12' class="w3-center w3-row roboto bold h6 greyTxt" 
+        <div id='15' class="w3-center w3-row roboto bold h6 greyTxt" 
             style="padding: 1vmax;">
                 <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
-                #12 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+                #15 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
         </div>
         </div>
     
+    <!--16 earlyMI-->
+    <div class="w3-container QA">
+        <div id='16' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #16 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        <!--Q-->
+        <div class="w3-container roboto h6" style="text-align: left">
+            <div class="w3-row w3-padding w3-mobile">
+            A 59-year-old man is admitted to the hospital with acute anterior wall myocardial infarction.
+            He undergoes an angioplasty and stent placement in the proximal LAD. His left ventricular
+            ejection fraction at the time of angioplasty was 30% with a hypokinetic anterior wall.
+            Prior to discharge, he is noted to have asymptomatic 7 beats of non-sustained ventricular
+            tachycardia.<br>
+            The next best step is:
+            </div>
+               
+            <ol class="choice">
+                <li>Implant a single chamber ICD before discharge.</li>
+                <li>Perform an electrophysiological study before discharge.</li>
+                <li>Schedule an ICD implantation in a month.</li>    
+                <li>Continue to monitor and reevaulate LVEF in a month.</li>   
+            </ol>
+            <div class="w3-btn w3-row w3-round ansBtn" 
+            onclick="show(this)" id='q16'>show answer</div>
+    
+        <!--A-->
+            <div class="w3-row answer roboto h6" id="q16Txt">
+                Answer: d. <br>
+                Asymptomatic NSVT within the first 40-day after MI does not warrant treatment
+                other than standard post MI treatment.
+            <div class="w3-row w3-center w3-padding w3-mobile blueBorder" style="margin-top: 3vmax">
+            <img src="media/QA/Q16 ICD early MI.png" style="width: 85%">
+            <div class="ref roboto w3-center">
+                <a href="http://circ.ahajournals.org/content/early/2017/10/30/CIR.0000000000000549">
+                2017 SCA Guidelines</a>
+            </div>
+            </div>
+            </div>
+    
+    
+        </div>
+    
+        <div id='16' class="w3-center w3-row roboto bold h6 greyTxt" 
+            style="padding: 1vmax;">
+                <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+                #16 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        </div>
+
+    <!--17 Pacing mode-->
+    <div class="w3-container QA">
+        <div id='17' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #17 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        <!--Q-->
+        <div class="w3-container roboto h6" style="text-align: left">
+            <div class="w3-col s9 w3-padding w3-mobile"><img src="media/QA/Q10 LQT.png"></div>
+            <div class="w3-col s3 w3-padding w3-mobile">
+            A 79-year-old man without structural heart disease presents with the tracing as shown.
+            Which of the following is the most appropriate mode of pacing?
+            </div>
+            
+            <ol class="choice">
+                <li>AAIR</li>
+                <li>DDI</li>
+                <li>VDD</li>
+                <li>VVIR</li>                                  
+            </ol>
+            <div class="w3-btn w3-row w3-round ansBtn" 
+            onclick="show(this)" id='q17'>show answer</div>
+    
+        <!--A-->
+            <div class="w3-row answer roboto h6" id="q17Txt">
+                Answer: c. <br>
+                ECG = complete heart block. VDD or DDD are the appropriate pacing mode.
+            </div>
+
+
+        </div>
+    
+        <div id='17' class="w3-center w3-row roboto bold h6 greyTxt" 
+            style="padding: 1vmax;">
+                <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+                #17 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        </div>
+
+    <!--18 hcm-->
+    <div class="w3-container QA">
+        <div id='18' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #18 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        <!--Q-->
+        <div class="w3-container roboto h6" style="text-align: left">
+            <div class="w3-row w3-padding w3-mobile">
+            A 17-year-old boy presents with an episode of syncope. Physical examination shows
+            systolic murmur. An echocardiogram shows hypertrophic cardiomyopathy with septal thickness
+            of 30mm and left ventricular outflow tract gradient of 50mmHg.<br>
+            The next best step is:
+            </div>
+               
+            <ol class="choice">
+                <li>Alcohol ablation of the septum.</li>
+                <li>Electrophysiologic study.</li>
+                <li>Implantation of an ICD.</li>    
+                <li>Implantation of a dual chamber pacemaker.</li>
+                <li>24-hour holter monitoring.</li>   
+            </ol>
+            <div class="w3-btn w3-row w3-round ansBtn" 
+            onclick="show(this)" id='q18'>show answer</div>
+    
+        <!--A-->
+            <div class="w3-row answer roboto h6" id="q18Txt">
+                Answer: c. <br>
+                High risk HCM --> ICD is indicated.
+            <div class="w3-row w3-center w3-padding w3-mobile blueBorder" style="margin-top: 3vmax">
+            <img src="media/QA/q18 HCM algo.png" style="width: 85%">
+            <div class="ref roboto w3-center">
+                <a href="http://circ.ahajournals.org/content/early/2017/10/30/CIR.0000000000000549">
+                2017 SCA Guidelines</a>
+            </div>
+            </div>
+            </div>
+    
+    
+        </div>
+    
+        <div id='18' class="w3-center w3-row roboto bold h6 greyTxt" 
+            style="padding: 1vmax;">
+                <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+                #18 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        </div>
+
+    <!--19 pocket-->
+    <div class="w3-container QA">
+        <div id='19' class="w3-center w3-row roboto bold h6 greyTxt" 
+        style="padding: 1vmax;">
+            <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+            #19 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        <!--Q-->
+        <div class="w3-container roboto h6" style="text-align: left">
+            <div class="w3-col s6 w3-padding w3-mobile"><img src="media/QA/q19 q.png"></div>
+            <div class="w3-col s6 w3-mobile" style="padding: 2vmax">
+                Which of the tissue planes shown is the appropriate level of insertion for
+                implantation of a pacemaker in most patients?
+            </div>
+            <ol class="choice w3-center">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                                                
+            </ol><br>
+            <div class="w3-btn w3-row w3-round ansBtn" 
+            onclick="show(this)" id='q19'>show answer</div>
+    
+        <!--A-->
+            <div class="w3-row answer roboto h6" id="q19Txt">
+                Answer: c. <br>
+                Subcutaneous pocket = below fat and above muscle layers.
+            
+            <div class="w3-cell-row w3-padding w3-mobile blueBorder" style="margin-top: 3vmax">
+            <img src="media/QA/Q19 pocket-layers-diagram.jpg">          
+            <div class="ref roboto w3-center">
+                <a href="http://www.howtopace.com/closure-of-pocket/">
+                howtopace.com</a>
+            </div>  
+                
+            </div>
+            </div>
+        </div>
+        
+        <div id='19' class="w3-center w3-row roboto bold h6 greyTxt" 
+            style="padding: 1vmax;">
+                <a onclick="plusQ(-1,this)" style="cursor: pointer;">&#10094;</a>
+                #19 <a onclick="plusQ(1,this)" style="cursor: pointer;">&#10095;</a>
+        </div>
+        </div>
+
+        <div class="progress-container">
+                <div class="progress-bar"></div>  
+            </div>
 
 </div>
 
@@ -1437,6 +1638,11 @@ function plusQ (n, name) {
     }
     QA[qNo-1].style.display = "block";
     QA[qNo-1].scrollIntoView ({behavior:"smooth", block:"start"})
+
+    //adjust range bar
+    var range = (qNo/q)*100;
+    var bar = document.getElementsByClassName("progress-bar");
+    bar[0].style.width = range + "%";
 }
 
 </script>	
