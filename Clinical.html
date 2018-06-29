@@ -55,6 +55,8 @@
 .leftCircle {margin-top: -22vh; font-size: 2.2vmax; text-align: left;padding-left: 1vmax}
 .rightCircle {margin-top: -17vh; font-size: 2.2vmax; text-align: right;padding-right: 1vmax}
 .leftCircle, .rightCircle {visibility: hidden}
+.leftCircle ul {font-size: 1.8vmax}
+.rightCircle ul {font-size: 2vmax}
 @media only screen and (max-width: 600px){
     .leftCircle, .rightCircle {margin-top:0; font-size: 2.7vmax;font-weight: 600}
 }
@@ -218,13 +220,16 @@ onclick="openNav()">&#9776;
 <!--3Blk ICD indication-->
 <div class="block w3-border">
     <div class="w3-btn next" onmouseover="next(3)"></div>
-    <div class="w3-row" style="text-align: right; padding-right: 0.5vw">
+    <div class="w3-row" style="text-align: right; padding-right: 0.5vw; line-height: 120%;padding-top: 2vh">
         <span class="roboto h5" style="color: #808080;">ICD</span>
         <span class="h3 slabo" style="color: #ea432f">.</span>
-        <span class="h5 bold" style="color: #a9a9a9">indications</span>
+        <span class="h5 bold" style="color: #a9a9a9;">indications</span><br>
+        <span class="slabo h7" style="color: #a7a7a7;line-height: normal">
+            provided that meaningful survival greater than 1 year is expected.
+        </span>
     </div>   
     
-    <div class="w3-row">
+    <div class="w3-row" style="padding-top: 3vmax">
         <div class="w3-col s0 m3 l3 w3-text-white w3-white">#</div>
         <div class="w3-col s6 m3 l3" style="padding: 0.5vmax 0vmax 5vmax 1vw">
             <div class="circle" style="background-color: #ea432f">
@@ -247,10 +252,15 @@ onclick="openNav()">&#9776;
             <div class="w3-col s5 m3 l4 slabo leftCircle" id='1P'>
                 <span class="bold redTxt">High risk for SCD</span>
                 <ul class="w3-ul list-opacity">
-                    <li>LVEF less than 35%, NYHA II+</li>
-                    <li>HCM: LV thickness</li>
-                    <li>ARVD: Poor RV and LV function.</li>
+                    <li>LVEF &le;35%, NYHA II-III</li>
+                    <li>Post MI, LVEF &le;30%, NYHA I</li>
+                    <li>Post MI, NSVT, LVEF &le;40%, +EPS</li>
+                    <li>HCM: LV thickness &ge;30mm, family history, syncope</li>
+                    <li>ARVD: RV or LVEF &le;35% or syncope</li>
+                    <li>LQTS: symptoms despite beta-blocker</li>
                     <li>Brugada: syncope with spontaneous type I</li>
+                    <li>Adult congenital heart disease: syncope, moderate ventricular dysfunction or
+                        hypertrophy, or +EPS</li>
                 </ul>
     
             </div>
@@ -259,10 +269,16 @@ onclick="openNav()">&#9776;
                 <span class="bold blueTxt">Reversible causes</span>
                     <ul class="w3-ul list-opacity">
                         <li>Acute ischemia</li>
+                        <li>Proarrhythmic medication effects</li>
+                        <li>Electrolytes disturbances</li>
                         <li>AF with WPW</li>
                         <li>Idiopathic outflow tract VT</li>
                         <li>Commotio Cordis</li>
                     </ul>
+                <div class="ref roboto">
+                <a href="http://circ.ahajournals.org/content/early/2017/10/30/CIR.0000000000000549">
+                    2017 SCA guidelines </a>
+                </div>
             </div>
         </div>
 
@@ -328,7 +344,7 @@ onclick="openNav()">&#9776;
             <ul class="w3-ul" style="text-align: right; padding: 1vmax;">
                 <li><span class="yellowTxt roboto h5"> Warfarin: </span> Continue without Bridging. <br>
                     <span class="h7 roboto" style="color: #d1d0d0">4.5 times lower incidence of hematoma in warfarin arm vs 
-                        heparin briding arm.</span><br>
+                        heparin bridging arm.</span><br>
                     </li>
                 <li><span class="yellowTxt roboto h5"> NOACs</span><br>
                     <span style="color: #a7a7a7; font-weight: 400" class="h7"> (Apixaban, Rivaroxaban, and etc)</span>
@@ -510,8 +526,8 @@ onclick="openNav()">&#9776;
     </div>
     </div>
     <div class="w3-responsive w3-container w3-center" style="padding: 4vmax 1vmax">
-        <table class="w3-table w3-bordered w3-centered roboto h6 cartoonTable" style="border-top:#ffce00 0.25vmax solid">
-            <tr class="h5 w3-wide" style="border-bottom: #ffce00 0.25vmax solid; color: #d1d1d1">
+        <table class="w3-table w3-bordered roboto h6 cartoonTable" style="border-top:#ffce00 0.25vmax solid">
+            <tr class="h5" style="border-bottom: #ffce00 0.25vmax solid; color: #ffce00">
                 <th>Conditions</th><th>DFT (YES/NO)</th><th>Class of recommendation</th>
             </tr>
             <tr class="w3-hoverable w3-hover-green">
