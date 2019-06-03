@@ -24,6 +24,7 @@ function scroll() {
         topArr[0].style.display="inline"}
        
     else {
+        unblur();
         hamburger.style.width="100%";
         hamburger.style.backgroundColor = "#ffc30b";
         hamburger.style.fontSize = "2.5vmax";

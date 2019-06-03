@@ -162,7 +162,7 @@ onclick="openNav()">&#9776;
 
 <!--1Blk basic ECG-->
 <div class="block">
-    <div class="w3-btn next" onmouseover="next(1)"></div>
+    
     <div class="fullBlock darkBrown">
         <div class="w3-cell-row w3-mobile">
             <div class="w3-container w3-cell w3-center w3-mobile">
@@ -187,10 +187,10 @@ onclick="openNav()">&#9776;
 
 <!--2Blk Brady-->
 <div class="block" id="Brady">
-    <div class="w3-btn next" onmouseover="next(2)"></div>   
+      
     <div class="w3-row w3-padding-small w3-center slabo h5 yellow w3-round-xxlarge w3-mobile" style="margin: 1vw">
     Bradyarrhythmias</div>
-    <div class="ref w3-center roboto">(mouse over image to show info)</div>
+    <div class="ref w3-center roboto">(double click the image to show the answer)</div>
 <!--slideset0-->
     <div class="container" style="margin-top: 2vh">
         <div class="progress-container">
@@ -201,7 +201,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet0">
         
         <div class="w3-container">
-            <img src="media/EKG/brady/1AVB.png" style="cursor: pointer;" onmouseover="showCell('1AVB')"
+            <img src="media/EKG/brady/1AVB.png" style="cursor: pointer;" ondblclick="showCell('1AVB')"
             onmouseout="hideCell('1AVB')" class="imgBox">
         <span class="roboto h6 w3-mobile caption" id='1AVB'> 
             1st degree AV block. In a severe case (PR>330ms), symptoms similar to pacemaker syndrome 
@@ -214,7 +214,7 @@ onclick="openNav()">&#9776;
         <!--brady2-->
         <div class="slideSet0">
             <div class="w3-container">
-                <img src="media/EKG/brady/AVW2.JPG" style="cursor: pointer;" onmouseover="showCell('AVW')"
+                <img src="media/EKG/brady/AVW2.JPG" style="cursor: pointer;" ondblclick="showCell('AVW')"
                 onmouseout="hideCell('AVW')" class="imgBox" >
                 <span class="roboto h6 w3-mobile caption" id='AVW'> 
                     Mobitz I or Wenckebach. Pacemaker is indicated if symptomatic.</span>
@@ -225,7 +225,7 @@ onclick="openNav()">&#9776;
         <!--brady3-->
         <div class="slideSet0">
             <div class="w3-container">
-                <img src="media/EKG/brady/high grade atropine.png" style="cursor: pointer;" onmouseover="showCell('CHB')"
+                <img src="media/EKG/brady/high grade atropine.png" style="cursor: pointer;" ondblclick="showCell('CHB')"
                 onmouseout="hideCell('CHB')" class="imgBox" >
                 <div class="w3-display-topright w3-button w3-round w3-mobile h6 moreInfo"
                 onclick="showCell('RBBB')">
@@ -253,7 +253,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet0">
             <div class="w3-container">
                 <img src="media/EKG/brady/intermittent CHB.png" style="cursor: pointer;" 
-                onmouseover="showCell('iCHB')" onmouseout="hideCell('iCHB')" class="imgBox" >
+                ondblclick="showCell('iCHB')" onmouseout="hideCell('iCHB')" class="imgBox" >
             
                 <span class="roboto h6 w3-mobile caption" id='iCHB'> 
                     Intermittent complete heart block. 2Ps without any QRS. Underlying 
@@ -266,7 +266,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet0">
             <div class="w3-container">
                 <img src="media/EKG/brady/3FB.jpg" style="cursor: pointer;" 
-                onmouseover="showCell('3FB')" onmouseout="hideCell('3FB')" class="imgBox" >
+                ondblclick="showCell('3FB')" onmouseout="hideCell('3FB')" class="imgBox" >
                 <div class="w3-display-topright w3-button w3-round w3-mobile h6 moreInfo"
                     onclick="showCell('3FBinfo')">
                     more info</div>
@@ -296,7 +296,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet0">
             <div class="w3-container">
                 <img src="media/EKG/brady/sinus pause.jpg" style="cursor: pointer;" 
-                onmouseover="showCell('pause')" onmouseout="hideCell('pause')" class="imgBox" >
+                ondblclick="showCell('pause')" onmouseout="hideCell('pause')" class="imgBox" >
                 <span class="roboto h6 w3-mobile caption" id='pause'> 
                     Sinus pause</span>
                 
@@ -307,7 +307,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet0">
             <div class="w3-container">
                 <img src="media/EKG/brady/SA block.jpg" style="cursor: pointer;" 
-                onmouseover="showCell('SABlk')" onmouseout="hideCell('SABlk')" class="imgBox" >
+                ondblclick="showCell('SABlk')" onmouseout="hideCell('SABlk')" class="imgBox" >
                 <div class="w3-display-topright w3-button w3-round w3-mobile h6 moreInfo"
                     onclick="showCell('SABinfo')">
                     more info</div>
@@ -343,10 +343,10 @@ onclick="openNav()">&#9776;
 
 <!--3Blk Tachy-->
 <div class="block" id="Tachy">
-    <div class="w3-btn next" onmouseover="next(3)"></div>   
+    
     <div class="w3-row w3-padding-small w3-center slabo h5 red w3-round-xxlarge w3-mobile" style="margin: 1vw">
     Tachyarrhythmias</div>
-    <div class="ref w3-center roboto">(mouse over image to show info)</div>
+    <div class="ref w3-center roboto">(double click the image to show the answer)</div>
 
 <!--slideset1-->
     <div class="container" style="margin-top: 2vh">
@@ -358,7 +358,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet1">
         
         <div class="w3-container">
-            <img src="media/EKG/tachy/AF.png" style="cursor: pointer;" onmouseover="showCell('af')"
+            <img src="media/EKG/tachy/AF.png" style="cursor: pointer;" ondblclick="showCell('af')"
             onmouseout="hideCell('af')" class="imgBox" >
         <span class="roboto h6 w3-mobile caption" id='af'> 
             Atrial Fibrillation: irregularly irregular rhythm. Noted with fibrillatory waves in V1.
@@ -371,7 +371,7 @@ onclick="openNav()">&#9776;
         
             <div class="w3-container">
                 <img src="media/EKG/tachy/svt w st depression.JPG" style="cursor: pointer;" 
-                onmouseover="showCell('svt')" onmouseout="hideCell('svt')" class="imgBox" >
+                ondblclick="showCell('svt')" onmouseout="hideCell('svt')" class="imgBox" >
             <span class="roboto h6 w3-mobile caption" id='svt'> 
                 Supraventricular tachycardia (SVT): Narrow complex tachycardia with no clearly visible P wave.
                 </span>
@@ -383,7 +383,7 @@ onclick="openNav()">&#9776;
         
             <div class="w3-container">
                 <img src="media/EKG/tachy/Brady induced PVT.png" style="cursor: pointer;" 
-                onmouseover="showCell('pvt')" onmouseout="hideCell('pvt')" class="imgBox" >
+                ondblclick="showCell('pvt')" onmouseout="hideCell('pvt')" class="imgBox" >
             <span class="roboto h6 w3-mobile caption" id='pvt'> 
                 Polymorphic VT with long QT or Torsade de Pointes.
                 </span>
@@ -395,7 +395,7 @@ onclick="openNav()">&#9776;
         
             <div class="w3-container">
                 <img src="media/EKG/tachy/RVOT VT.JPG" style="cursor: pointer;" 
-                onmouseover="showCell('rvot')" onmouseout="hideCell('rvot')" class="imgBox" >
+                ondblclick="showCell('rvot')" onmouseout="hideCell('rvot')" class="imgBox" >
             <span class="roboto h6 w3-mobile caption" id='rvot'> 
                 Idiopathic VT from RV outflow tract. Noted with positive QRS in II, III, and aVF;
                 normal R wave progression in chest leads.
@@ -408,7 +408,7 @@ onclick="openNav()">&#9776;
         
             <div class="w3-container">
                 <img src="media/EKG/tachy/VT EKG.jpg" style="cursor: pointer;" 
-                onmouseover="showCell('vt')" onmouseout="hideCell('vt')" class="imgBox" >
+                ondblclick="showCell('vt')" onmouseout="hideCell('vt')" class="imgBox" >
             <span class="roboto h6 w3-mobile caption" id='vt'> 
                 Ischemic VT in a patient with history of inferior wall MI.
                 </span>
@@ -420,7 +420,7 @@ onclick="openNav()">&#9776;
         
             <div class="w3-container">
                 <img src="media/EKG/tachy/VT2.png" style="cursor: pointer;" 
-                onmouseover="showCell('vt2')" onmouseout="hideCell('vt2')" class="imgBox" >
+                ondblclick="showCell('vt2')" onmouseout="hideCell('vt2')" class="imgBox" >
             <span class="roboto h6 w3-mobile caption" id='vt2'> 
                 Monomorphic VT. VA dissociation is clearly seen.
                 </span>
@@ -435,10 +435,10 @@ onclick="openNav()">&#9776;
 
 <!--4Blk SCD-->
 <div class="block" id="SCA">
-    <div class="w3-btn next" onmouseover="next(4)"></div>   
+    
     <div class="w3-row w3-padding-small w3-center slabo h5 blue w3-round-xxlarge w3-mobile" style="margin: 1vw">
     Conditions with risk for sudden cardiac arrest</div>
-    <div class="ref w3-center roboto">(mouse over image to show info)</div>
+    <div class="ref w3-center roboto">(double click the image to show the answer)</div>
 
 <!--slideset2-->
     <div class="container" style="margin-top: 2vh">
@@ -450,7 +450,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet2">
         
         <div class="w3-container">
-            <img src="media/EKG/SCD/Brugada EKG.png" style="cursor: pointer;" onmouseover="showCell('brugada')"
+            <img src="media/EKG/SCD/Brugada EKG.png" style="cursor: pointer;" ondblclick="showCell('brugada')"
             onmouseout="hideCell('brugada')" class="imgBox" >
         <span class="roboto h6 w3-mobile caption" id='brugada'> 
             Brugada ECG: J point elevation with coved-type ST elevation in V1-V2.
@@ -462,7 +462,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet2">
         
             <div class="w3-container">
-                <img src="media/EKG/SCD/HCM.jpg" style="cursor: pointer;" onmouseover="showCell('hcm')"
+                <img src="media/EKG/SCD/HCM.jpg" style="cursor: pointer;" ondblclick="showCell('hcm')"
                 onmouseout="hideCell('hcm')" class="imgBox" >
             <span class="roboto h6 w3-mobile caption" id='hcm'> 
                 Hypertrophic cardiomyopathy: high voltage in left-sided leads with ST depression and 
@@ -475,7 +475,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet2">
         
             <div class="w3-container">
-                <img src="media/EKG/SCD/LQT1_broad based T.png" style="cursor: pointer;" onmouseover="showCell('lqt')"
+                <img src="media/EKG/SCD/LQT1_broad based T.png" style="cursor: pointer;" ondblclick="showCell('lqt')"
                 onmouseout="hideCell('lqt')" class="imgBox" >
             <span class="roboto h6 w3-mobile caption" id='lqt'> 
                 Long QT syndrome.
@@ -487,7 +487,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet2">
         
             <div class="w3-container">
-                <img src="media/EKG/SCD/Old MI w 1AVB.png" style="cursor: pointer;" onmouseover="showCell('oldMI')"
+                <img src="media/EKG/SCD/Old MI w 1AVB.png" style="cursor: pointer;" ondblclick="showCell('oldMI')"
                 onmouseout="hideCell('oldMI')" class="imgBox" >
             <span class="roboto h6 w3-mobile caption" id='oldMI'> 
                 Old MI; Noted with Q waves in inferior and anterior leads.
@@ -499,7 +499,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet2">
         
             <div class="w3-container">
-                <div class="w3-row" style="cursor: pointer;" onmouseover="showCell('wpw')"
+                <div class="w3-row" style="cursor: pointer;" ondblclick="showCell('wpw')"
                 onmouseout="hideCell('wpw')" class="imgBox">
                     <div class="w3-col s6 w3-center w3-padding">
                     <img src="media/EKG/SCD/WPW resting.png"></div>
@@ -517,7 +517,7 @@ onclick="openNav()">&#9776;
         <div class="slideSet2">
                 
             <div class="w3-container">
-                <img src="media/EKG/SCD/ARVD.png" style="cursor: pointer;" onmouseover="showCell('arvd')"
+                <img src="media/EKG/SCD/ARVD.png" style="cursor: pointer;" ondblclick="showCell('arvd')"
                 onmouseout="hideCell('arvd')" class="imgBox" >
                 <div class="ref roboto w3-center">
                         <a href="http://circ.ahajournals.org/content/120/6/477.long">
@@ -542,10 +542,10 @@ onclick="openNav()">&#9776;
 
 <!--5Blk Device-->
 <div class="block" id="Device">
-    <div class="w3-btn next" onmouseover="next(3)"></div>   
+      
     <div class="w3-row w3-padding-small w3-center slabo h5 w3-green w3-round-xxlarge w3-mobile" style="margin: 1vw">
     Device related</div>
-    <div class="ref w3-center roboto">(mouse over image to show info)</div>
+    <div class="ref w3-center roboto">(double click the image to show the answer)</div>
 
     <!--slideset3-->
       <div class="container" style="margin-top: 2vh">
@@ -557,7 +557,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container">
-            <img src="media/EKG/device/V lead no capture.JPG" style="cursor: pointer;" onmouseover="showCell('d1')"
+            <img src="media/EKG/device/V lead no capture.JPG" style="cursor: pointer;" ondblclick="showCell('d1')"
             onmouseout="hideCell('d1')" class="imgBox" >
             <div class="w3-display-topmiddle roboto imgLabel">1 week after implantation</div>
         <span class="roboto h6 w3-mobile caption" id='d1'> 
@@ -571,7 +571,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container">
-            <img src="media/EKG/device/Lead Fx 1800 ohms.JPG" style="cursor: pointer;" onmouseover="showCell('fx')"
+            <img src="media/EKG/device/Lead Fx 1800 ohms.JPG" style="cursor: pointer;" ondblclick="showCell('fx')"
             onmouseout="hideCell('fx')" class="imgBox" >
             <div class="w3-display-topmiddle roboto imgLabel">s/p VVI 10years+</div>
         <span class="roboto h6 w3-mobile caption" id='fx'> 
@@ -589,7 +589,7 @@ onclick="openNav()">&#9776;
         <div class="w3-container">
             <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">DDD 60/120 AVD 170.
             </div>
-            <span style="cursor: pointer;" onmouseover="showCell('d3')"
+            <span style="cursor: pointer;" ondblclick="showCell('d3')"
             onmouseout="hideCell('d3')" class="imgBox" >
             <img src="media/EKG/device/lead switch ddd 60 120.png" style="padding: 1vmax">
             
@@ -612,7 +612,7 @@ onclick="openNav()">&#9776;
                50F with complete heart block s/p DDD 8 years ago, presents with syncope.
                Pacemaker parameters are within normal ranges. Holter recording is as shown.
             </div>
-            <span style="cursor: pointer;" onmouseover="showCell('d4')"
+            <span style="cursor: pointer;" ondblclick="showCell('d4')"
             onmouseout="hideCell('d4')" class="imgBox" >
             <img src="media/EKG/device/V oversensing 1.JPG" style="width: 70%">
             
@@ -629,7 +629,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container w3-center">
-            <span style="cursor: pointer;" onmouseover="showCell('ddi')"
+            <span style="cursor: pointer;" ondblclick="showCell('ddi')"
             onmouseout="hideCell('ddi')" class="imgBox" >
             <img src="media/EKG/device/DDI 60 AVD 200.png" style="width: 80%">
             
@@ -648,7 +648,7 @@ onclick="openNav()">&#9776;
             <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                 VVI 50. 
             </div>
-            <span style="cursor: pointer;" onmouseover="showCell('d6')"
+            <span style="cursor: pointer;" ondblclick="showCell('d6')"
             onmouseout="hideCell('d6')" class="imgBox" >
             <img src="media/EKG/device/wnkbch w vvi.png" style="width: 80%">
             
@@ -665,7 +665,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
             <div class="w3-container w3-center">
-                <span style="cursor: pointer;" onmouseover="showCell('d7')"
+                <span style="cursor: pointer;" ondblclick="showCell('d7')"
                 onmouseout="hideCell('d7')" class="imgBox" >
                 <img src="media/EKG/device/PMT.png" style="width: 80%">
                 
@@ -686,7 +686,7 @@ onclick="openNav()">&#9776;
                 <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                     DDD 50/110, sensed AVD 120 ms, paced AVD 150 ms, PVARP 200ms
                 </div>
-                <span style="cursor: pointer;" onmouseover="showCell('d8')"
+                <span style="cursor: pointer;" ondblclick="showCell('d8')"
                 onmouseout="hideCell('d8')" class="imgBox" >
                 <img src="media/EKG/device/PPM Block.png" style="width: 80%">
                 
@@ -707,7 +707,7 @@ onclick="openNav()">&#9776;
                 <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                     DDD 70/110
                 </div>
-                <span style="cursor: pointer;" onmouseover="showCell('d9')"
+                <span style="cursor: pointer;" ondblclick="showCell('d9')"
                 onmouseout="hideCell('d9')" class="imgBox" >
                 <img src="media/EKG/device/safety pacing after PVCs.png" style="width: 80%">
                 
@@ -723,7 +723,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
             <div class="w3-container w3-center">
-                <span style="cursor: pointer;" onmouseover="showCell('mvp')"
+                <span style="cursor: pointer;" ondblclick="showCell('mvp')"
                 onmouseout="hideCell('mvp')" class="imgBox" >
                 <img src="media/EKG/device/MVP 12L EKG.png" style="width: 85%">
                 
@@ -746,7 +746,7 @@ onclick="openNav()">&#9776;
                 onclick="showCell('d11info')">
                 more info</span>
                 </div>
-                <span style="cursor: pointer;" onmouseover="showCell('d11')"
+                <span style="cursor: pointer;" ondblclick="showCell('d11')"
                 onmouseout="hideCell('d11')" class="imgBox" >
                 <img src="media/EKG/device/BiV pacing in rapid AFL.png" style="width: 85%">
                 </span>
@@ -777,7 +777,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
             <div class="w3-container w3-center">
-                <span style="cursor: pointer;" onmouseover="showCell('d12')"
+                <span style="cursor: pointer;" ondblclick="showCell('d12')"
                 onmouseout="hideCell('d12')" class="imgBox" >
                 <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                     65M s/p CRT, in ICU with pneumonia and respiratory failure. The device is programmed
@@ -798,7 +798,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container w3-center">
-            <span style="cursor: pointer;" onmouseover="showCell('d13')"
+            <span style="cursor: pointer;" ondblclick="showCell('d13')"
             onmouseout="hideCell('d13')" class="imgBox" >
             <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                 1hr after DDD implantation.
@@ -819,7 +819,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container w3-center">
-            <span style="cursor: pointer;" onmouseover="showCell('d14')"
+            <span style="cursor: pointer;" ondblclick="showCell('d14')"
             onmouseout="hideCell('d14')" class="imgBox" >
             <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                 1wk post CRT
@@ -838,7 +838,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container w3-center">
-            <span style="cursor: pointer;" onmouseover="showCell('d15')"
+            <span style="cursor: pointer;" ondblclick="showCell('d15')"
             onmouseout="hideCell('d15')" class="imgBox" >
             <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                 VVIR; post chest radiation
@@ -858,7 +858,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container w3-center">
-            <span style="cursor: pointer;" onmouseover="showCell('d16')"
+            <span style="cursor: pointer;" ondblclick="showCell('d16')"
             onmouseout="hideCell('d16')" class="imgBox" >
             
             <img src="media/EKG/device/A undersensing.png" style="width: 90%">
@@ -884,30 +884,49 @@ onclick="openNav()">&#9776;
 </div>
 
 
-
-
-
-<script src="JF_next_pointer.js"></script>
 <script src="JF_clickToShow.js"></script>
 <script src="JF Nav.js"></script>
+<script src="block navigation.js" ></script>
+<script src="pointer.js" ></script>
 <script>
 
+//nav and pointer
+//up arrow
 window.addEventListener("keydown", function(event) {
-        event.preventDefault();
-        if (event.keyCode===32) {
-        var p = document.getElementsByClassName("pointer");
-        p[0].style.display = "none";}
-    })
+    event.preventDefault();
+    if (event.keyCode===38) {
+    blockNav(-1);
+    closeMenu();}
+})
+//down arrow
+window.addEventListener("keydown", function(event) {
+    event.preventDefault();
+    if (event.keyCode===40) {
+    blockNav(1);
+    closeMenu();}
+})
 
-
-window.onscroll = function() {scroll()};
+//esc
 window.addEventListener("keydown", function(event) {
         event.preventDefault();
         if (event.keyCode===27) {
         window.unblur()}
     })
 
+//p
+window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===80) {
+        pointerSwitch()}
+    })
+
+
+
+//pointer
+var pSwitch = 0;
 window.ontouchmove = function () {unblur()};
+window.onscroll = function() {scroll()};
+
 
 
 var slideIndex = [1,1,1,1];

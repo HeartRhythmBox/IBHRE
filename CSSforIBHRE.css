@@ -148,19 +148,11 @@ margin-bottom: 14vh;
     100%{opacity: 1;}
     }
 
-.next {
-    position: absolute; display: inline;
-    left: 98vw; 
-    background-color: transparent;
-    color: transparent;
-}
 
 @media only screen and (max-width: 600px){
     .sidenav a, .closebtn, .onThisPage {font-size: 3vmax}
     }
-@media only screen and (max-width: 800px) {
-    .next {left: 93%;}
-    }
+
 img {width: 100%}
 
 @media only screen and (max-width: 600px){
