@@ -71,8 +71,8 @@
 .list-opacity li:hover {opacity: 0.5;}
 .list-opacity li {padding: 0.1vmin}
 
-.leftCircle {margin-top: -22vh; font-size: 2.1vmax; text-align: left;padding-left: 1vmax}
-.rightCircle {margin-top: -17vh; font-size: 2.1vmax; text-align: right;padding-right: 1vmax}
+.leftCircle {margin-top: -22vh; font-size: 2.2vmax; text-align: left;padding-left: 1vmax}
+.rightCircle {margin-top: -17vh; font-size: 2.2vmax; text-align: right;padding-right: 1vmax}
 .leftCircle, .rightCircle {visibility: hidden}
 .leftCircle ul {font-size: 1.8vmax}
 .rightCircle ul {font-size: 2vmax}
@@ -97,13 +97,6 @@ ol.choice {list-style: lower-alpha inside}
   height: 1vh;
   background-color:#ff9a00;
   width: 0%;
-}
-
-#card {font-size:3vmax;height: 50vh;padding:2vmax;display: table-cell;vertical-align: middle;width:80vw;
-        box-shadow: rgba(200,200, 200, 0.6) 5px -5px 3px}
-.pad10LR {padding: 2vmax 10vw}
-@media only screen and (max-width: 800px) {
-    #card {height:30vh}
 }
 
 </style>
@@ -199,7 +192,7 @@ onclick="openNav()">&#9776;
                 <b>Sinus Node Dysfunction</b>
             </span>
             <div id="symp" class="w3-ul blue slabo h6 w3-hoverable blueList mobileSize w3-center w3-padding" 
-            style="color: #f1f1f1">
+            style="color: lightgray">
                 Pacemaker is indicated only in symptomatic patient regardless of the duration of pause.
             </div>
 
@@ -210,7 +203,7 @@ onclick="openNav()">&#9776;
             </span>
             <div id="avb" class="w3-ul slabo h6 w3-hoverable blueList mobileSize w3-center w3-padding" 
             style="color: black">
-                Pacemaker is indicated in advanced AV block (Mobitz II, 3rd AVB, or high-grade AVB) regardless of the symptoms.
+                Pacemaker is indicated only in symptomatic patient regardless of the duration of pause.
             </div>
 
         </div>
@@ -218,26 +211,6 @@ onclick="openNav()">&#9776;
     </div>
 
 
-</div>
-
-<!--block 2.5 definition: SND, high GR AVB, AF with high Gr AVB, acc junc with va dissoc-->
-<div class="block" style="background:radial-gradient(#f2f2f2,white)">
-    <div class="w3-row w3-padding w3-margin slabo w3-center" 
-    style="font-size:3vmax;color:#555">
-        Short notes from brady guideline...
-    </div>
-    <div class="w3-row roboto pad10LR" style="margin-top: 5vmax">
-        <div id='card'>
-
-        </div>
-        <div class="w3-center w3-row roboto noMobile" 
-        style="font-size:2vmax;padding:1.5vmax;margin-top: 3vmax">
-            <span id="bradyWheelLeft" class="w3-btn w3-round-large w3-padding-small">&leftarrow;</span>
-            <span id="bradyWheelCenter"></span>
-            <span id="bradyWheelRight" class="w3-btn w3-round-large w3-padding-small">&rightarrow;</span><br>
-            <span id="autoFwd" title="autoplay on/off" class="w3-btn w3-round-large w3-padding-small w3-border">A</span>
-        </div>
-    </div>
 </div>
 
 <!--3Blk ICD indication-->
@@ -273,7 +246,7 @@ onclick="openNav()">&#9776;
     </div>
     <div class="w3-row">
             <div class="w3-col s5 m3 l4 slabo leftCircle" id='1P'>
-                <span class="bold">High risk for SCD</span>
+                <span class="bold redTxt">High risk for SCD</span>
                 <ul class="w3-ul list-opacity">
                     <li>LVEF &le;35%, NYHA II-III</li>
                     <li>Post MI, LVEF &le;30%, NYHA I</li>
@@ -316,14 +289,14 @@ onclick="openNav()">&#9776;
 
     <div class="w3-cell-row">
         <div class="w3-cell w3-container w3-center w3-cell-middle crt" onclick="toggle('crt',2)" style="cursor: pointer;">
-            <div class="w3-row w3-center" style="text-align: left;margin-top: 5vh">
+            <div class="w3-row w3-center" style="text-align: left;">
                     <span class="roboto h5" style="color: #808080;">CRT</span>
                     <span class="h3 slabo" style="color: #ea432f">.</span>
                     <span class="h5 bold" style="color: #a9a9a9">indications</span>
                 </div>
 
         <img src="media/Clinical/CRT.jpg" style="border-radius: 50%; width: 30vw">
-        <div class="w3-row w3-center roboto h5 bold w3-padding">
+        <div class="w3-row w3-center roboto h5 bold w3-padding" style="margin-top: 4vh">
             <div class="w3-col s3 w3-mobile"
                 style="background: linear-gradient(to right, #ff0000 0%, #ff5a00 100%);color: #f1f1f1">
                 QRS duration
@@ -342,7 +315,7 @@ onclick="openNav()">&#9776;
                 </div>
         </div>
         </div>
-        <div class="w3-cell w3-container w3-center w3-cell-middle crt w3-padding" style="display: none;cursor: pointer;"
+        <div class="w3-cell w3-container w3-center w3-cell-middle crt" style="display: none;cursor: pointer;"
             onclick="toggle('crt',1)">
             <img src="media/Clinical/crt algo.png" style="width: 60%">
             <div class="ref">
@@ -1715,7 +1688,6 @@ onclick="openNav()">&#9776;
 <script src="JF Nav.js"></script>
 <script src="block navigation.js" ></script>
 <script src="pointer.js" ></script>
-<script src="wheel.js" ></script>
 <script>
 
 //nav and pointer
@@ -1777,10 +1749,6 @@ function plusQ (n, name) {
     var bar = document.getElementsByClassName("progress-bar");
     bar[0].style.width = range + "%";
 }
-
-window.onload = function(){
-    showTxtBlk();autoFwd()
-   }
 
 </script>
 
