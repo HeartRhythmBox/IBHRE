@@ -8,8 +8,9 @@ function show(name){
     document.getElementById(id).style.display = "block";
 }
 
-function showCell(name){
-    document.getElementById(name).style.display = "block";
+function showCell(name1,name2){
+    document.getElementById(name1).style.display = "block";
+    document.getElementById(name2).style.display = "none";
 }
 
 function hideCell(name){
