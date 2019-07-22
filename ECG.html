@@ -375,7 +375,7 @@ onclick="openNav()">&#9776;
     
     <div class="w3-row w3-padding-small w3-center slabo h5 red w3-round-xxlarge w3-mobile" style="margin: 1vw">
     Tachyarrhythmias</div>
-    <div class="ref w3-center roboto">(double click the image to show the answer)</div>
+    
 
 <!--slideset1-->
     <div class="container" style="margin-top: 2vh">
@@ -386,9 +386,11 @@ onclick="openNav()">&#9776;
         <!--tachy1-->
         <div class="slideSet1">
         
-        <div class="w3-container">
-            <img src="media/EKG/tachy/AF.png" style="cursor: pointer;" ondblclick="showCell('af')"
-            onmouseout="hideCell('af')" class="imgBox" >
+        <div class="w3-container w3-center">
+            <img src="media/EKG/tachy/AF.png" class="imgBox" >
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('af','t1')" 
+            style="cursor: pointer;" id="t1">
+            Show Answer</span>
         <span class="roboto h6 w3-mobile caption" id='af'> 
             Atrial Fibrillation: irregularly irregular rhythm. Noted with fibrillatory waves in V1.
             </span>
@@ -398,9 +400,11 @@ onclick="openNav()">&#9776;
         <!--tachy2-->
         <div class="slideSet1">
         
-            <div class="w3-container">
-                <img src="media/EKG/tachy/svt w st depression.JPG" style="cursor: pointer;" 
-                ondblclick="showCell('svt')" onmouseout="hideCell('svt')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/tachy/svt w st depression.JPG" class="imgBox" >
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('svt','t2')" 
+                style="cursor: pointer;" id="t2">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='svt'> 
                 Supraventricular tachycardia (SVT): Narrow complex tachycardia with no clearly visible P wave.
                 </span>
@@ -410,9 +414,11 @@ onclick="openNav()">&#9776;
         <!--tachy3-->
         <div class="slideSet1">
         
-            <div class="w3-container">
-                <img src="media/EKG/tachy/Brady induced PVT.png" style="cursor: pointer;" 
-                ondblclick="showCell('pvt')" onmouseout="hideCell('pvt')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/tachy/Brady induced PVT.png" class="imgBox" >
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('pvt','t3')" 
+                style="cursor: pointer;" id="t3">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='pvt'> 
                 Polymorphic VT with long QT or Torsade de Pointes.
                 </span>
@@ -422,9 +428,11 @@ onclick="openNav()">&#9776;
         <!--tachy4-->
         <div class="slideSet1">
         
-            <div class="w3-container">
-                <img src="media/EKG/tachy/RVOT VT.JPG" style="cursor: pointer;" 
-                ondblclick="showCell('rvot')" onmouseout="hideCell('rvot')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/tachy/RVOT VT.JPG" class="imgBox" >
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('rvot','t4')" 
+                style="cursor: pointer;" id="t4">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='rvot'> 
                 Idiopathic VT from RV outflow tract. Noted with positive QRS in II, III, and aVF;
                 normal R wave progression in chest leads.
@@ -435,9 +443,11 @@ onclick="openNav()">&#9776;
         <!--tachy5-->
         <div class="slideSet1">
         
-            <div class="w3-container">
-                <img src="media/EKG/tachy/VT EKG.jpg" style="cursor: pointer;" 
-                ondblclick="showCell('vt')" onmouseout="hideCell('vt')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/tachy/VT EKG.jpg" class="imgBox" >
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('vt','t5')" 
+                style="cursor: pointer;" id="t5">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='vt'> 
                 Ischemic VT in a patient with history of inferior wall MI.
                 </span>
@@ -447,9 +457,11 @@ onclick="openNav()">&#9776;
     <!--tachy6-->
     <div class="slideSet1">
         
-            <div class="w3-container">
-                <img src="media/EKG/tachy/VT2.png" style="cursor: pointer;" 
-                ondblclick="showCell('vt2')" onmouseout="hideCell('vt2')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/tachy/VT2.png" class="imgBox" >
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('vt2','t6')" 
+                style="cursor: pointer;" id="t6">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='vt2'> 
                 Monomorphic VT. VA dissociation is clearly seen.
                 </span>
@@ -467,8 +479,7 @@ onclick="openNav()">&#9776;
     
     <div class="w3-row w3-padding-small w3-center slabo h5 blue w3-round-xxlarge w3-mobile" style="margin: 1vw">
     Conditions with risk for sudden cardiac arrest</div>
-    <div class="ref w3-center roboto">(double click the image to show the answer)</div>
-
+    
 <!--slideset2-->
     <div class="container" style="margin-top: 2vh">
         <div class="progress-container">
@@ -478,9 +489,11 @@ onclick="openNav()">&#9776;
         <!--SCD1-->
         <div class="slideSet2">
         
-        <div class="w3-container">
-            <img src="media/EKG/SCD/Brugada EKG.png" style="cursor: pointer;" ondblclick="showCell('brugada')"
-            onmouseout="hideCell('brugada')" class="imgBox" >
+        <div class="w3-container w3-center">
+            <img src="media/EKG/SCD/Brugada EKG.png" class="imgBox" >
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('brugada','s1')" 
+            style="cursor: pointer;" id="s1">
+            Show Answer</span>
         <span class="roboto h6 w3-mobile caption" id='brugada'> 
             Brugada ECG: J point elevation with coved-type ST elevation in V1-V2.
             </span>
@@ -490,9 +503,11 @@ onclick="openNav()">&#9776;
         <!--SCD2-->
         <div class="slideSet2">
         
-            <div class="w3-container">
-                <img src="media/EKG/SCD/HCM.jpg" style="cursor: pointer;" ondblclick="showCell('hcm')"
-                onmouseout="hideCell('hcm')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/SCD/HCM.jpg" class="imgBox" >
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('hcm','s2')" 
+                style="cursor: pointer;" id="s2">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='hcm'> 
                 Hypertrophic cardiomyopathy: high voltage in left-sided leads with ST depression and 
                 T wave inversion.
@@ -503,11 +518,13 @@ onclick="openNav()">&#9776;
         <!--SCD3-->
         <div class="slideSet2">
         
-            <div class="w3-container">
-                <img src="media/EKG/SCD/LQT1_broad based T.png" style="cursor: pointer;" ondblclick="showCell('lqt')"
-                onmouseout="hideCell('lqt')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/SCD/LQT1_broad based T.png" class="imgBox" >
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('lqt','s3')" 
+                style="cursor: pointer;" id="s3">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='lqt'> 
-                Long QT syndrome.
+                Long QT 
                 </span>
             </div>
             </div> 
@@ -515,9 +532,11 @@ onclick="openNav()">&#9776;
         <!--SCD4-->
         <div class="slideSet2">
         
-            <div class="w3-container">
-                <img src="media/EKG/SCD/Old MI w 1AVB.png" style="cursor: pointer;" ondblclick="showCell('oldMI')"
-                onmouseout="hideCell('oldMI')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/SCD/Old MI w 1AVB.png" class="imgBox" >
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('oldMI','s4')" 
+                style="cursor: pointer;" id="s4">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='oldMI'> 
                 Old MI; Noted with Q waves in inferior and anterior leads.
                 </span>
@@ -527,14 +546,16 @@ onclick="openNav()">&#9776;
         <!--SCD5-->
         <div class="slideSet2">
         
-            <div class="w3-container">
-                <div class="w3-row" style="cursor: pointer;" ondblclick="showCell('wpw')"
-                onmouseout="hideCell('wpw')" class="imgBox">
+            <div class="w3-container w3-center">
+                <div class="w3-row" class="imgBox">
                     <div class="w3-col s6 w3-center w3-padding">
                     <img src="media/EKG/SCD/WPW resting.png"></div>
                     <div class="w3-col s6 w3-center w3-padding">
                     <img src="media/EKG/SCD/WPW AF.png"></div>
                 </div>
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('wpw','s5')" 
+                style="cursor: pointer;" id="s5">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='wpw'> 
                 Left: sinus rhythm with pre-excitation (delta wave; slurred QRS upstroke) = WPW EKG. <br>
                 Right: AF with extremely fast conduction via accessory pathway or AF with WPW.
@@ -545,13 +566,15 @@ onclick="openNav()">&#9776;
         <!--SCD6-->
         <div class="slideSet2">
                 
-            <div class="w3-container">
-                <img src="media/EKG/SCD/ARVD.png" style="cursor: pointer;" ondblclick="showCell('arvd')"
-                onmouseout="hideCell('arvd')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/SCD/ARVD.png" class="imgBox" >
                 <div class="ref roboto w3-center">
                         <a href="http://circ.ahajournals.org/content/120/6/477.long">
                         Jain et al. Circulation 2009.</a>
                     </div>
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('arvd','s6')" 
+                    style="cursor: pointer;" id="s6">
+                    Show Answer</span>
                 
             <span class="roboto h6 w3-mobile caption" id='arvd'> 
                 Arrhythmogenic right ventricular dysplasia (ARVD), a disease of right ventricule.
@@ -565,9 +588,11 @@ onclick="openNav()">&#9776;
         <!--SCD7-->
         <div class="slideSet2">
         
-            <div class="w3-container">
-                <img src="media/EKG/SCD/ER.png" style="cursor: pointer;" ondblclick="showCell('ER')"
-                onmouseout="hideCell('ER')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/SCD/ER.png" class="imgBox" >
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('ER','s7')" 
+                style="cursor: pointer;" id="s7">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='ER'> 
                 Early repolarization: J point elevation concaved downward ST elevation.
                 </span>
@@ -577,9 +602,11 @@ onclick="openNav()">&#9776;
         <!--SCD8-->
         <div class="slideSet2">
         
-            <div class="w3-container">
-                <img src="media/EKG/SCD/short QT.png" style="cursor: pointer;" ondblclick="showCell('sQT')"
-                onmouseout="hideCell('sQT')" class="imgBox" >
+            <div class="w3-container w3-center">
+                <img src="media/EKG/SCD/short QT.png" class="imgBox" >
+                <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('sQT','s8')" 
+                style="cursor: pointer;" id="s8">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='sQT'> 
                 Short QT    </span>
             </div>
@@ -596,8 +623,7 @@ onclick="openNav()">&#9776;
       
     <div class="w3-row w3-padding-small w3-center slabo h5 w3-green w3-round-xxlarge w3-mobile" style="margin: 1vw">
     Device related</div>
-    <div class="ref w3-center roboto">(double click the image to show the answer)</div>
-
+    
     <!--slideset3-->
       <div class="container" style="margin-top: 2vh">
         <div class="progress-container">
@@ -607,10 +633,12 @@ onclick="openNav()">&#9776;
     <!--device1-->
     <div class="slideSet3">
         
-        <div class="w3-container">
-            <img src="media/EKG/device/V lead no capture.JPG" style="cursor: pointer;" ondblclick="showCell('d1')"
-            onmouseout="hideCell('d1')" class="imgBox" >
+        <div class="w3-container w3-center">
+            <img src="media/EKG/device/V lead no capture.JPG" class="imgBox" >
             <div class="w3-display-topmiddle roboto imgLabel">1 week after implantation</div>
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d1','d1a')" 
+            style="cursor: pointer;" id="d1a">
+            Show Answer</span>
         <span class="roboto h6 w3-mobile caption" id='d1'> 
             Dual chamber pacemaker with failure to sense and pace of V lead. <br>
             Given the timing of 1wk after implantation, lead dislodgement is most likely.
@@ -621,10 +649,12 @@ onclick="openNav()">&#9776;
     <!--device2-->
     <div class="slideSet3">
         
-        <div class="w3-container">
-            <img src="media/EKG/device/Lead Fx 1800 ohms.JPG" style="cursor: pointer;" ondblclick="showCell('fx')"
-            onmouseout="hideCell('fx')" class="imgBox" >
+        <div class="w3-container w3-center">
+            <img src="media/EKG/device/Lead Fx 1800 ohms.JPG" class="imgBox" >
             <div class="w3-display-topmiddle roboto imgLabel">s/p VVI 10years+</div>
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('fx','d2')" 
+            style="cursor: pointer;" id="d2">
+            Show Answer</span>
         <span class="roboto h6 w3-mobile caption" id='fx'> 
             Single chamber pacemaker with failure to sense and pace of V lead. <br>
             Given the timing of 10years after implantation, lead fracture, insulation break, or
@@ -637,15 +667,16 @@ onclick="openNav()">&#9776;
     <!--device3-->
     <div class="slideSet3">
         
-        <div class="w3-container">
+        <div class="w3-container w3-center">
             <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">DDD 60/120 AVD 170.
             </div>
-            <span style="cursor: pointer;" ondblclick="showCell('d3')"
-            onmouseout="hideCell('d3')" class="imgBox" >
+            <span class="imgBox" >
             <img src="media/EKG/device/lead switch ddd 60 120.png" style="padding: 1vmax">
             
             </span>
-            
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d3','d3a')" 
+            style="cursor: pointer;" id="d3a">
+            Show Answer</span>
         <span class="roboto h6 w3-mobile caption" id='d3'> 
             A and V leads switch in the header. Ventricular pacing is being inhibited by P wave (middle tracing),
             ruling out lead dislodgement (there needs to be a lead in atrium).
@@ -663,11 +694,13 @@ onclick="openNav()">&#9776;
                50F with complete heart block s/p DDD 8 years ago, presents with syncope.
                Pacemaker parameters are within normal ranges. Holter recording is as shown.
             </div>
-            <span style="cursor: pointer;" ondblclick="showCell('d4')"
-            onmouseout="hideCell('d4')" class="imgBox" >
+            <span class="imgBox" >
             <img src="media/EKG/device/V oversensing 1.JPG" style="width: 70%">
             
             </span>
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d4','d4a')" 
+            style="cursor: pointer;" id="d4a">
+            Show Answer</span>
             
         <span class="roboto h6 w3-mobile caption" id='d4'> 
             Intermittent failure to pace the ventricle is noted. Oversensing is suspected.
@@ -680,12 +713,13 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container w3-center">
-            <span style="cursor: pointer;" ondblclick="showCell('ddi')"
-            onmouseout="hideCell('ddi')" class="imgBox" >
+            <span class="imgBox" >
             <img src="media/EKG/device/DDI 60 AVD 200.png" style="width: 80%">
             
             </span>
-            
+        <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('ddi','d5')" 
+            style="cursor: pointer;" id="d5">
+            Show Answer</span> 
         <span class="roboto h6 w3-mobile caption" id='ddi'> 
             Normal pacemaker function. DDI 60, AVD 200.
          </span>
@@ -699,12 +733,14 @@ onclick="openNav()">&#9776;
             <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                 VVI 50. 
             </div>
-            <span style="cursor: pointer;" ondblclick="showCell('d6')"
-            onmouseout="hideCell('d6')" class="imgBox" >
+            <span class="imgBox" >
+            
             <img src="media/EKG/device/wnkbch w vvi.png" style="width: 80%">
             
             </span>
-            
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d6','d6a')" 
+            style="cursor: pointer;" id="d6a">
+            Show Answer</span>
         <span class="roboto h6 w3-mobile caption" id='d6'> 
             Normal pacemaker function. Rhythm = sinus rhythm with AV Wenckebach. 
             V pacing came on the dropped beats.
@@ -716,12 +752,13 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
             <div class="w3-container w3-center">
-                <span style="cursor: pointer;" ondblclick="showCell('d7')"
-                onmouseout="hideCell('d7')" class="imgBox" >
+                <span class="imgBox" >
                 <img src="media/EKG/device/PMT.png" style="width: 80%">
                 
                 </span>
-                
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d7','d7a')" 
+                style="cursor: pointer;" id="d7a">
+                Show Answer</span> 
             <span class="roboto h6 w3-mobile caption" id='d7'> 
                 Pacemaker mediated tachycardia; triggered by a PVC with retrograde P, followed
                 by an non-capture A pacing with long AV delay, allowing the following retrograde
@@ -737,12 +774,14 @@ onclick="openNav()">&#9776;
                 <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                     DDD 50/110, sensed AVD 120 ms, paced AVD 150 ms, PVARP 200ms
                 </div>
-                <span style="cursor: pointer;" ondblclick="showCell('d8')"
-                onmouseout="hideCell('d8')" class="imgBox" >
+                <span class="imgBox" >
                 <img src="media/EKG/device/PPM Block.png" style="width: 80%">
                 
                 </span>
                 
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d8','d8a')" 
+                style="cursor: pointer;" id="d8a">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='d8'> 
                 Sinus tachycardia with pacemaker Wenckebach.<br>
                 TARP = 200+120, UTR = 110 bpm = 546 ms, 2:1 block @ 320 ms or 188 bpm,<br> 
@@ -758,12 +797,13 @@ onclick="openNav()">&#9776;
                 <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                     DDD 70/110
                 </div>
-                <span style="cursor: pointer;" ondblclick="showCell('d9')"
-                onmouseout="hideCell('d9')" class="imgBox" >
+                <span class="imgBox" >
                 <img src="media/EKG/device/safety pacing after PVCs.png" style="width: 80%">
                 
                 </span>
-                
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d9','d9a')" 
+                style="cursor: pointer;" id="d9a">
+                Show Answer</span>    
             <span class="roboto h6 w3-mobile caption" id='d9'> 
                 Safety pacing triggered by timely PVCs. Noted with short AV delays.
              </span>
@@ -774,12 +814,13 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
             <div class="w3-container w3-center">
-                <span style="cursor: pointer;" ondblclick="showCell('mvp')"
-                onmouseout="hideCell('mvp')" class="imgBox" >
+                <span class="imgBox" >
                 <img src="media/EKG/device/MVP 12L EKG.png" style="width: 85%">
                 
                 </span>
-                
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('mvp','d10')" 
+                style="cursor: pointer;" id="d10">
+                Show Answer</span>   
             <span class="roboto h6 w3-mobile caption" id='mvp'> 
                 Managed ventricular pacing: AAI mode switches to DDD with short AV delay after
                 AP without native ventricular beat.
@@ -797,8 +838,7 @@ onclick="openNav()">&#9776;
                 onclick="showCell('d11info')">
                 more info</span>
                 </div>
-                <span style="cursor: pointer;" ondblclick="showCell('d11')"
-                onmouseout="hideCell('d11')" class="imgBox" >
+                <span class="imgBox" >
                 <img src="media/EKG/device/BiV pacing in rapid AFL.png" style="width: 85%">
                 </span>
 
@@ -816,7 +856,10 @@ onclick="openNav()">&#9776;
                     </div>
                 </div>
             </div>
-                
+            
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d11','d11a')" 
+            style="cursor: pointer;" id="d11a">
+            Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='d11'> 
                 Atrial flutter with intermittent biventricular pacing. Noted with beats of fusion
                 and native LBBB. 
@@ -828,8 +871,7 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
             <div class="w3-container w3-center">
-                <span style="cursor: pointer;" ondblclick="showCell('d12')"
-                onmouseout="hideCell('d12')" class="imgBox" >
+                <span class="imgBox" >
                 <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                     65M s/p CRT, in ICU with pneumonia and respiratory failure. The device is programmed
                     DDDR, 60-125 bpm. 
@@ -839,6 +881,9 @@ onclick="openNav()">&#9776;
                 
                 </span>
                 
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d12','d12a')" 
+                style="cursor: pointer;" id="d12a">
+                Show Answer</span>
             <span class="roboto h6 w3-mobile caption" id='d12'> 
                 Sinus tachycardia above upper rate limit; hence no biventricular pacing.
              </span>
@@ -849,15 +894,16 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container w3-center">
-            <span style="cursor: pointer;" ondblclick="showCell('d13')"
-            onmouseout="hideCell('d13')" class="imgBox" >
+            <span class="imgBox" >
             <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                 1hr after DDD implantation.
                 </div>
             <img src="media/EKG/device/A lead in V.png" style="width: 75%">
             
             </span>
-            
+        <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d13','d13a')" 
+            style="cursor: pointer;" id="d13a">
+            Show Answer</span>    
         <span class="roboto h6 w3-mobile caption" id='d13'> 
             The atrial lead has dislodged into the ventricle. Ventricular captures are seen 
             by the first spike (from atrial lead) followed by a functional non-capture from the second spike (from
@@ -870,15 +916,16 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container w3-center">
-            <span style="cursor: pointer;" ondblclick="showCell('d14')"
-            onmouseout="hideCell('d14')" class="imgBox" >
+            <span class="imgBox" >
             <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                 1wk post CRT
                 </div>
             <img src="media/EKG/device/VV delay.png" style="width: 75%">
             
             </span>
-            
+        <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d14','d14a')" 
+            style="cursor: pointer;" id="d14a">
+            Show Answer</span>   
         <span class="roboto h6 w3-mobile caption" id='d14'> 
             Normal CRT function with VV delay of 40ms. 
          </span>
@@ -889,15 +936,16 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container w3-center">
-            <span style="cursor: pointer;" ondblclick="showCell('d15')"
-            onmouseout="hideCell('d15')" class="imgBox" >
+            <span class="imgBox" >
             <div class="w3-row w3-center roboto imgLabel" style="margin-top: 3vh">
                 VVIR; post chest radiation
                 </div>
             <img src="media/EKG/device/runaway pacemaker.png" style="width: 75%">
             
             </span>
-            
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d15','d15a')" 
+            style="cursor: pointer;" id="d15a">
+            Show Answer</span>    
         <span class="roboto h6 w3-mobile caption" id='d15'> 
             Pacemaker failure. Radiation may cause deterioration of lead and pacemaker
             circuit. ECG show asynchronous pacing. Urgent generator change is needed.
@@ -909,13 +957,14 @@ onclick="openNav()">&#9776;
     <div class="slideSet3">
         
         <div class="w3-container w3-center">
-            <span style="cursor: pointer;" ondblclick="showCell('d16')"
-            onmouseout="hideCell('d16')" class="imgBox" >
+            <div class="imgBox" >
             
             <img src="media/EKG/device/A undersensing.png" style="width: 90%">
             
-            </span>
-            
+            </div>
+            <span class="w3-button w3-border w3-round w3-center roboto h8" onclick="showCell('d16','d16a')" 
+            style="cursor: pointer;" id="d16a">
+            Show Answer</span>    
         <span class="roboto h6 w3-mobile caption" id='d16'> 
             Atrial undersensing. Some of A pacing spikes occur at the time of native QRS causing
             safety pacing.
